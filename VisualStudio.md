@@ -2,8 +2,8 @@
 1. Download Visual Studio Community version from this link:
 
 [Visual Studio Community](https://visualstudio.microsoft.com/vs/)
-[InstallStep0.1](https://github.com/sedc-codecademy/skwd8-05-oopcsharp/blob/master/img/01.png?raw=true)
-[InstallStep0.2](https://github.com/sedc-codecademy/skwd8-05-oopcsharp/blob/master/img/02.png?raw=true)
+![InstallStep0.1](https://github.com/sedc-codecademy/skwd8-05-oopcsharp/blob/master/img/01.png?raw=true)
+![InstallStep0.2](https://github.com/sedc-codecademy/skwd8-05-oopcsharp/blob/master/img/02.png?raw=true)
 
 2. Check ASP.NET and web development box ( For later subjects )
 
