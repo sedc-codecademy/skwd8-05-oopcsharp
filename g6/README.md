@@ -15,7 +15,7 @@ This repository will contain every piece of material about the subject. It will 
 * [Presentations link](https://1drv.ms/u/s!Avm0QTH5BvHdgfwQmgsbYopViLdwsA?e=qhhJMo)
 * [Schedule](https://drive.google.com/file/d/1GjxpXz2uikzPr192BU9JEl0BrqpN6nCn/view?fbclid=IwAR2juYCaGw9mKzfjdUA5D-DjObTbdHmbYIKwQ6Qb_kuOEksGWxbdK6pXUqk)
 
-## Resources for being up to date with JavaScript
+## Resources for being up to date with C#
 #### Sites and newsletters
 [C# Weekly Newsletter](https://csharpdigest.net/)
 
