@@ -33,6 +33,6 @@ This repository will contain every piece of material about the subject. It will 
 [C# in depth 4th Edition (Advanced)](https://www.bookdepository.com/C-Depth-4E-Jon-Skeet/9781617294532)
 
 ## Contact
-Trainer: trainer@mail.com
+Trainer: dblazheski96@gmail.com
 
-Assistant: assistant@mail.com
+Assistant: vukashin@hotmail.com
