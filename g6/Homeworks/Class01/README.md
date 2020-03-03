@@ -10,4 +10,4 @@
 * Bonus - Wait for the execution of the next line for n seconds using Thread class
 
 
-Video presentation of how it should look like [here](./TrafficLightApp.webm)
+![TrafficLightApp](./TrafficLightApp.gif)
