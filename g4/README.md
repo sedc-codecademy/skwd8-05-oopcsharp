@@ -1,13 +1,13 @@
 # C# Basic &#x1F4D8;
 **This subject is the first subject where we start to use C# as a programming language with the Visual Studio IDE. With that in mind we will learn:**
-* Introducton to C# and Visual Studio
+* Introduction to C# and Visual Studio
 * Using Visual Studio to code
 * Programming principles in C#
 * How to build console applications
 
 ## This Repository
 This repository will contain every piece of material about the subject. It will include:
-* Materials and documentation for the classes 
+* Materials and documentation for the classes
 * Code that we write on the classes
 * Homework
 
@@ -33,6 +33,6 @@ This repository will contain every piece of material about the subject. It will 
 [C# in depth 4th Edition (Advanced)](https://www.bookdepository.com/C-Depth-4E-Jon-Skeet/9781617294532)
 
 ## Contact
-Trainer: trainer@mail.com
+Trainer/Assistant: djovanov92@gmail.com
 
-Assistant: assistant@mail.com
+Trainer/Assistant: spasevska.kristina87@gmail.com

@@ -32,7 +32,11 @@ This repository will contain every piece of material about the subject. It will 
 
 [C# in depth 4th Edition (Advanced)](https://www.bookdepository.com/C-Depth-4E-Jon-Skeet/9781617294532)
 
-## Contact
-Trainer: trainer@mail.com
+#### Extra Material
+* [Difference between C# and .Net](https://www.educba.com/c-sharp-vs-net)
+* [Visual Studio shortcuts](https://myelearninghub.com/visual-studio-shortcuts)
 
-Assistant: assistant@mail.com
+## Contact
+Trainer: cekicmiodrag@gmail.com
+
+Assistant: goce.kabov@yahoo.com
