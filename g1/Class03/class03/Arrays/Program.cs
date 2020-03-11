@@ -12,12 +12,12 @@ namespace Arrays
             //initialize the array elements with values from input
 
             // we use numberOfElement only for printing which element user is entering
-            int numberofelement = 0;
+            int numberOfElements = 0;
             for (int i = 0; i < numbers.Length; i++)
             {
-                numberofelement = i + 1;
+                numberOfElements = i + 1;
 
-                Console.WriteLine("enter the " + numberofelement + " number:");
+                Console.WriteLine("enter the " + numberOfElements + " number:");
                 numbers[i] = int.Parse(Console.ReadLine());
             }
 

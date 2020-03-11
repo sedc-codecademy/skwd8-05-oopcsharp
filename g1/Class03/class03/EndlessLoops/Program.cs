@@ -15,7 +15,7 @@ namespace EndlessLoops
 
             while (true)
             {
-                Console.WriteLine("Druze, vnesi BROJ:");
+                Console.WriteLine("Please enter a number:");
 
                 result = int.TryParse(Console.ReadLine(), out number);
 
@@ -26,7 +26,7 @@ namespace EndlessLoops
                     continue;
 
                 // this code will be executed if result == true which means user entered number
-                Console.WriteLine("BRAVO DECKO!");
+                Console.WriteLine("Congratulations, you entered a number !");
                 break;
 
             }
@@ -38,14 +38,14 @@ namespace EndlessLoops
             bool res;
             for (int i=0; ;i++)
             {
-                Console.WriteLine("Druze, vnesi BROJ:");
+                Console.WriteLine("Please enter a number:");
 
                 res = int.TryParse(Console.ReadLine(), out num);
 
                 if (res == false)
                     continue;
 
-                Console.WriteLine("BRAVO DECKO!");
+                Console.WriteLine("Congratulations, you entered a number");
                 break;
             }
             Console.ReadLine();
