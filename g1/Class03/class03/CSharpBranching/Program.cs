@@ -60,7 +60,6 @@ namespace CSharpBranching
                 Console.WriteLine("Invalid input, close the program and try again.");
             }
 
-            Console.WriteLine($"asd {score}");
             Console.ReadLine();
         }
     }
