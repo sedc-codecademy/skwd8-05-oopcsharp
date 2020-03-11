@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "Loops\Loops.csproj", "{3E252205-FE67-4455-A6A2-F4F40938D5F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{A67127B7-D41A-4C4A-A213-458F6AEE97E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E252205-FE67-4455-A6A2-F4F40938D5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E252205-FE67-4455-A6A2-F4F40938D5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E252205-FE67-4455-A6A2-F4F40938D5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E252205-FE67-4455-A6A2-F4F40938D5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A67127B7-D41A-4C4A-A213-458F6AEE97E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A67127B7-D41A-4C4A-A213-458F6AEE97E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A67127B7-D41A-4C4A-A213-458F6AEE97E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A67127B7-D41A-4C4A-A213-458F6AEE97E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1958362-E74B-49F9-9BD5-F62BA75CB159}
+	EndGlobalSection
+EndGlobal
