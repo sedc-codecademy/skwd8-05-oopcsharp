@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "Loops\Loops.csproj", "{BD3357C8-2BF8-48D0-9161-4933A1F68BAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{CFB58BED-60CC-4188-885B-C94A52C8A130}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD3357C8-2BF8-48D0-9161-4933A1F68BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3357C8-2BF8-48D0-9161-4933A1F68BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3357C8-2BF8-48D0-9161-4933A1F68BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3357C8-2BF8-48D0-9161-4933A1F68BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB58BED-60CC-4188-885B-C94A52C8A130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB58BED-60CC-4188-885B-C94A52C8A130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB58BED-60CC-4188-885B-C94A52C8A130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB58BED-60CC-4188-885B-C94A52C8A130}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28D44D9D-299D-41D1-8684-1E8168FA6018}
+	EndGlobalSection
+EndGlobal
