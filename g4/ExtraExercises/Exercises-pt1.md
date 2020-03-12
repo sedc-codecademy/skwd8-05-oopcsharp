@@ -39,6 +39,7 @@ Fizz-Buzz
 
 ### Create a new project (console .net core app) called digitComparer.
 - Write a program that will print out **all** two-digit numbers, which have the first digit greater than 	the second digit.
+Sample output:
 10
 20
 21
