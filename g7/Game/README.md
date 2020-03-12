@@ -77,3 +77,8 @@
 		* -10 health 
 	* You find a huge rock. It comes alive somehow and tries to smash you...
 		* -30 health 
+		
+## Testing out the game
+There is a game already uploaded in a .zip file. Unzip it and play it to see how the game looks. 
+* Email: bob22@mail.com
+* Password: bobbest
