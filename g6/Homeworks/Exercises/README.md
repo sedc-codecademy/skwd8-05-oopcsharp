@@ -45,11 +45,12 @@ When the game start it should ask the user for difficulty.
 
 Every guess should give the user hint if it is close and also should display the number that the user last entered.
 example
-If the number that should be guessed is 10 and the user enters 18 it should print out "Your guess is far to high, number entered: 18".
-If the number that should be guessed is 10 and the user enters 2 it should print out "Your guess is far to low, number entered: 2".
-If the number that should be guessed is 10 and the user enters 7 it should print out "Your guess is a little bit lower, number entered: 7".
-If the number that should be guessed is 10 and the user enters 13 it should print out "Your guess is a little bit higher, number entered: 13".
-If the number that should be guessed is 10 and the user enters 10 it should print out "Nailed it. number entered: 10".
+* If the number that should be guessed is 10 and the user enters 18 it should print out "Your guess is far to high, number entered: 18".
+* If the number that should be guessed is 10 and the user enters 2 it should print out "Your guess is far to low, number entered: 2".
+* If the number that should be guessed is 10 and the user enters 7 it should print out "Your guess is a little bit lower, number entered: 7".
+* If the number that should be guessed is 10 and the user enters 13 it should print out "Your guess is a little bit higher, number entered: 13".
+* If the number that should be guessed is 10 and the user enters 10 it should print out "Nailed it. number entered: 10".
+
 You can add your kind of notifications if you like.
 
 Based on how fast the user guessed the number it should display a proper title and the number that should be guessed.
