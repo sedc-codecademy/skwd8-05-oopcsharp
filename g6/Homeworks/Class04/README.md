@@ -1,6 +1,6 @@
 # Homework Class 4 ðŸ“’
 
-## Task 1
+## Task 0
 * Create a new method called Substrings
 * In that method enter the following string :
   * "Hello from SEDC Codecademy v7.0"
