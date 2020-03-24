@@ -97,5 +97,6 @@ Console.WriteLine(trimmedString);
 ```
 ## Extra Materials 📘
 * [Official Microsoft documentation for methods](https://docs.microsoft.com/en-us/dotnet/csharp/methods)
+* [C# String Functions And Properties](https://www.completecsharptutorial.com/csharp-articles/csharp-string-function.php)
 * [.NET Pearls - DateTime](https://www.dotnetperls.com/datetime)
-* [.NET Pearls - DateTime format](https://www.dotnetperls.com/datetime-format)
+
