@@ -95,8 +95,6 @@ Console.WriteLine(new string(chars));
 string trimmedString = ourString.Trim();
 Console.WriteLine(trimmedString);
 ```
-
-```
 ## Extra Materials 📘
 * [Official Microsoft documentation for methods](https://docs.microsoft.com/en-us/dotnet/csharp/methods)
 * [.NET Pearls - DateTime](https://www.dotnetperls.com/datetime)
