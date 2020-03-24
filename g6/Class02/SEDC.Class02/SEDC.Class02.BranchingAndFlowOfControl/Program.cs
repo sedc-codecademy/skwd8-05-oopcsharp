@@ -85,6 +85,22 @@ namespace SEDC.Class02.BranchingAndFlowOfControl
             }
 
             #endregion
+
+            string var1 = Console.ReadLine();
+            string var2 = Console.ReadLine();
+
+            int num1 = 0;
+            bool isValidInputVar1 = int.TryParse(var1, out num1);
+
+            if(!int.TryParse(var2, out int num2))
+            {
+                Console.WriteLine("Invalid number.");
+            }
+
+            if (!isValidInputVar1)
+            {
+                Console.WriteLine("Invalid number.");
+            }
         }
     }
 }
