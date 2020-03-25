@@ -62,12 +62,27 @@ namespace Class4.Methods
 				return false;
 			}
 		}
+
+		// JS function
+		//function JediMindTrick2(isJedi, jediLevel)
+		//{
+		//	if (isJedi && jediLevel > 3)
+		//	{
+		//		Console.WriteLine("We are in the JediMindTrick2 method!");
+		//		return "asd";
+		//	}
+		//	else
+		//	{
+		//		return false;
+		//	}
+		//}
+
 		// Everything you want to execute, you must add to the Main method
 		static void Main(string[] args)
 		{
 			// THIS IS THE CALLING OF THE FUNCTION
-			//CheckDroids1();
-			//CheckDroids2(false);
+			CheckDroids1();
+			CheckDroids2(false);
 
 			// void methods return nothing and that is why we can't use them as values
 			// void empty = CheckDroids1(); // we can't use it as a value
