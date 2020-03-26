@@ -6,9 +6,10 @@ Classes are the backbone of every object-oriented language. As we mentioned befo
 ```c#
 public class Person
 {
-	public string Name {get;set;}
-	public string Age {get;set;}
-	private long AccountNumber {get;set;}
+	public string Name;
+	public string Age;
+	private long AccountNumber;
+	
 	public void Introduce(){
 		Console.WriteLine($"Hi my name is {Name} and I am {Age} years old !");
 	}
@@ -22,15 +23,6 @@ bob.Name = "Bob";
 bob.Age = 31;
 bob.Introduce();
 ```
-```c#
-Person anne = new Person(){
-	Name = "Anne",
-	Age = 34
-};
-anne.Introduce();
-```
-
-
 
 ## Extra Materials 📘
 * [Official Microsoft documentation for classes](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/classes)
