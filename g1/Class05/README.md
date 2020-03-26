@@ -9,8 +9,8 @@ public class Person
 	public string Name {get;set;}
 	public string Age {get;set;}
 	private long AccountNumber {get;set;}
-	public void Talk(string text){
-		Console.WriteLine($"Human {Name} is saying {text}");
+	public void Introduce(){
+		Console.WriteLine($"Hi my name is {Name} and I am {Age} years old !");
 	}
 }
 ```
@@ -20,14 +20,14 @@ Objects in C# are the physical representation of the data that is created by the
 Person bob = new Person();
 bob.Name = "Bob";
 bob.Age = 31;
-bob.Talk();
+bob.Introduce();
 ```
 ```c#
 Person anne = new Person(){
 	Name = "Anne",
 	Age = 34
 };
-anne.Talk();
+anne.Introduce();
 ```
 
 
