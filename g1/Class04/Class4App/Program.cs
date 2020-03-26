@@ -27,10 +27,6 @@ namespace Class4App
             #endregion
 
             #region SecondPart
-
-
-            #endregion
-
             string group = "G1";
             int num = 50;
 
@@ -38,6 +34,8 @@ namespace Class4App
 
 
             //Increment(num);
+
+            #endregion
 
             Console.ReadLine();
         }
@@ -88,9 +86,6 @@ namespace Class4App
 
             return sum;
         }
-
-        
-
         
     }
 }
