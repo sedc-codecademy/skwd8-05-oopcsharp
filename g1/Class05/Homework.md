@@ -1,48 +1,45 @@
 # Homework Class 5 📒
 ## Task 1
-Print individual characters of the string in reverse order.
-Example: we love c#
-Expected Output :
-
-The characters of the string in reverse are : 
-#c evol ew
+*Print individual characters of the string in reverse order.
+*Example: we love c#
+*Expected Output : #c evol ew
 
 ## Task 2
-Count the total number of words in a string entered by the user.
-Example: user enters "I love C#"
-Expected output: "I love c#" contains 3 words.
+*Count the total number of words in a string entered by the user.
+*Example: user enters "I love C#"
+*Expected output: "I love c#" contains 3 words.
 
 ## Task 3
-Find maximum occurring character in a string
-Example: "We want this situation with covid-19 to ends!"
-Expected Output : The highest frequency of character 't' appears number of times : 6 
+*Find maximum occurring character in a string
+*Example: "We want this situation with covid-19 to ends!"
+*Expected Output : The highest frequency of character 't' appears number of times : 6 
 
 ## Task 4
 "The whole group of G1 loves C#, we are sure that with their deducation and passion 
 they will be successfull programers soon!"
 
-Print the whole text after "," in the console.
-Bonus* - Try to do that without counting the characters till "," by yourself :)
+*Print the whole text after "," in the console.
+*Bonus - Try to do that without counting the characters till "," by yourself :)
 
 ## Task 5
-Display the Day properties (year, month, day, hour, minute, second) from the today's date.
-Expected Output :
-year = 2020                                                                      
-month = 3                                                                     
-day = 26                                                                       
-hour = 23                                                                        
-minute = 12                                                                      
-second = 22   
+*Display the Day properties (year, month, day, hour, minute, second) from the today's date.
+*Expected Output :
+*year = 2020                                                                      
+*month = 3                                                                     
+*day = 26                                                                       
+*hour = 23                                                                        
+*minute = 12                                                                      
+*second = 22   
 
 ## Task 6
-Find the leap years between 2008 and 2020.
-Expected output:
-2008 is a leap year.
-2012 is a leap year.
-2016 is a leap year.
-2020 is a leap year.
+*Find the leap years between 2008 and 2020.
+*Expected output:
+*2008 is a leap year.
+*2012 is a leap year.
+*2016 is a leap year.
+*2020 is a leap year.
 
-Hint*- make some researches of DateTime methods, you will find interesting ones that might help you ;)
+*Hint- make some researches of DateTime methods, you will find interesting ones that might help you ;)
  
 ## Task 7
 * Create a class Dog
