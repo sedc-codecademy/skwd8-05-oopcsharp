@@ -5,16 +5,7 @@ Example: we love c#
 Expected Output :
 
 The characters of the string in reverse are : 
-#
-c 
-
-e
-v
-o
-l
-
-e
-w
+#c evol ew
 
 ## Task 2
 Count the total number of words in a string entered by the user.
