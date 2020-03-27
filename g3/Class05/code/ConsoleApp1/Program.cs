@@ -4,6 +4,7 @@ namespace ConsoleApp1
 {
     class Program
     {
+        // An Example method
         static int Dejan(string num1, int num2)
         {
             return 5;
@@ -27,11 +28,11 @@ namespace ConsoleApp1
             Console.WriteLine(myBirthday.AddMinutes(66));
             Console.WriteLine(myBirthday.AddMonths(-3));
 
-            Console.WriteLine(currentDateTime.ToString("MM/dd/yy"));
+            Console.WriteLine(currentDateTime.ToString("MM/dd/yy")); // Custom format for date and time object
             Console.WriteLine(currentDateTime.Year);
             Console.WriteLine(currentDateTime.Day);
             Console.WriteLine(currentDateTime.Month);
-            Console.WriteLine(currentDateTime.ToString("yyyy/MMM/d/h/tt"));
+            Console.WriteLine(currentDateTime.ToString("yyyy/MMM/d/h/tt")); // Date and time with AM/PM format
 
             //DateTime newMyBirthday = myBirthday.AddDays(1);
             #endregion
@@ -57,11 +58,11 @@ namespace ConsoleApp1
             Console.Read();
         }
 
-        static int CaluclateAge(DateTime birthday)
+        static int CaluclateAge(DateTime birthday) // This methods takes 1 parameter and it's type is DateTime, so when we call it we must send a DateTime object
         {
             DateTime rightNow = DateTime.Now;
             int age = rightNow.Year - birthday.Year;
-            if (rightNow.Month < birthday.Month || 
+            if (rightNow.Month < birthday.Month ||
                 (rightNow.Month == birthday.Month && rightNow.Day < birthday.Day))
                 age--;
 
