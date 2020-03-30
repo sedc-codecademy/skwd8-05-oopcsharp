@@ -35,7 +35,8 @@ namespace Exe2
 
             Console.WriteLine(iminja.Length);
 
-            //TODO: Check this resize function
+            int[] numbers = new int[5]{ 1, 2, 3, 4, 5 };
+            Array.Resize(ref numbers, 3);
 
             foreach (string ime in iminja)
             {
