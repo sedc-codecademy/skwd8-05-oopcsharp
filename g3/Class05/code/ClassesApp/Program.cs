@@ -10,10 +10,10 @@ namespace ClassesApp
             Animal cat = new Animal();
             Animal mouse = new Animal("Jerry", "Gruevski", 16);
             dog.Eat("apple");
-            Console.WriteLine(dog.Name);
+            Console.WriteLine(dog.Name); // This works because Name property is a public property, and it can be used with an object constructed from Animal class
             Console.WriteLine(dog.LastName);
-            Console.WriteLine($"You just widrawaled: {dog.Widrawal(100, 123321)}");
-            //dog.Widrawal(100, 56524256);
+            //Console.WriteLine(dog.Money); // This does not work, because Money is a private property, it can only be accessed inside the Animal class
+            Console.WriteLine($"You just widrawaled: {dog.Withdrawal(100, 123321)}");
 
             Console.Read();
         }
@@ -21,11 +21,27 @@ namespace ClassesApp
 
     class Animal
     {
-        public Animal(string name, string lastName, int age, string breed, int anNLB, int anHALK, int money)
+        // This is the constructor of a class, it's almost the same as any other methods, the only difference is that we don't write any return type not even void, and is very similar to a constructor function as in JavaScript
+        public Animal() // If we don't write any constructor, an empty constructor like this one is automatically added by default
         {
-            Console.WriteLine($"Constructing an object {name}");
+            //Console.WriteLine($"Constructing an empty Animal object");
+        }
+
+        // We use constructors for constructing an object, we can have multiple constructors, and we can construct objects using any of the construcotrs
+        public Animal(string name, string lastName, int age)
+        {
+            Console.WriteLine($"Constructing an partial object {name}"); // A simple console message when we will call particularly this constructor
             Name = name;
             LastName = lastName;
+            Age = age;
+        }
+
+        // A third way of constructing an object
+        public Animal(string name, string lastName, int age, string breed, int anNLB, int anHALK, int money)
+        {
+            Console.WriteLine($"Constructing an object {name}"); // Another simple message when we call this constructor
+            Name = name; // "Name" is the property that is defined in this class below, and "name" is the parameter of the constructor
+            LastName = lastName; // The same as above
             Age = age;
             Breed = breed;
             AccountNumberNLB = anNLB;
@@ -33,32 +49,20 @@ namespace ClassesApp
             Money = money;
         }
 
-        public Animal(string name, string lastName, int age)
-        {
-            Console.WriteLine($"Constructing an partial object {name}");
-            Name = name;
-            LastName = lastName;
-            Age = age;
-        }
-
-        public Animal()
-        {
-            Console.WriteLine($"Constructing an empty Animal object");
-        }
-
-        public string Name { get; set; }
+        public string Name { get; set; } // Public properties like "Name" here, can be used(accessed) inside and outside of Animal class, the outside way is by constructing an object from Animal class, see the references in the Main method
         public string LastName { get; set; }
         public int Age { get; set; }
         public string Breed { get; set; }
-        private int AccountNumberNLB { get; set; }
+        private int AccountNumberNLB { get; set; } 
         private int AccountNumberHALK { get; set; }
-        private int Money { get; set; }
+        private int Money { get; set; } // Private properties like Money can be used or accessed only inside the Animal class.
 
         public void Eat(string food)
         {
             Console.WriteLine($"Eeating {food}");
         }
 
+        // Private methods like "CheckMoney" can be called only inside the Animal class
         private int CheckMoney(int money)
         {
             if (Money > money)
@@ -73,11 +77,12 @@ namespace ClassesApp
             }
         }
 
-        public int Widrawal(int money, int accountNum)
+        // Public methods like "Withdrawal" can be called inside and outside of Animal class. The outside way is by constructing an object from Animal class, that's why they are public
+        public int Withdrawal(int money, int accountNum)
         {
             if (accountNum == AccountNumberHALK)
             {
-                return CheckMoney(money);
+                return CheckMoney(money); // We can call the private method CheckMoney in here, because Withdrawal's method definition is the same scope as CheckMoney and they are both inside the class Animal
             }
             else if (accountNum == AccountNumberNLB)
             {
