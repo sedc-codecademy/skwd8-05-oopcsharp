@@ -22,12 +22,13 @@ namespace Class5.classes
 		}
 		public void ShowSSN()
 		{
-			Console.WriteLine($"SSN: {SSN}");
+			long ssnhidden = SSN / 1000;
+			Console.WriteLine($"SSN: {ssnhidden}xxx");
 		}
 		private void GenerateSSN()
 		{
 			// Fancy algorithm for generating SSN
-			SSN = 0503123454345;
+			SSN = 503123454345;
 			Console.WriteLine("SSN Generated");
 		}
 		// Constructor
