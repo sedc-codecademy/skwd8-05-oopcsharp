@@ -32,6 +32,11 @@ This repository will contain every piece of material about the subject. It will 
 
 [C# in depth 4th Edition (Advanced)](https://www.bookdepository.com/C-Depth-4E-Jon-Skeet/9781617294532)
 
+## Extra Excercises
+[edabit](https://edabit.com/challenges/csharp) - Variety of challange excercises and multi level difficulty you can choose from, also you can select excercises by a specific category like Dates, Strings, etc..  
+[csharpexercises](https://csharpexercises.com/) - Mostly basic excercises to train logic  
+[exercism.io](https://exercism.io/tracks/csharp/exercises) - Mostly advanced excercises without much help
+
 ## Contact
 Trainer: dblazheski96@gmail.com
 
