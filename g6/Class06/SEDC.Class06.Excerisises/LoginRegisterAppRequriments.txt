@@ -1,0 +1,36 @@
+## Client request
+
+Create Application that will Register and Login users
+
+On login as user name should be used email that need to be validated (basic)
+Password should contain min 1 uppercase character, min 1 digit, and should not be shorter that 8 characters (basic)
+
+For registration user should enter email and needs to be checked if already that email is used 
+should enter password, first name, last name, date of birth also we need to take care when the user has created his profile and also give him a valid Id.
+
+after login or registration the application should print all the users in the system.
+
+
+## Deatils about the implementation worked on class
+
+* After registration/login print all users including new one.
+* Should get all info form user input.
+* Should be given choice of registering or login
+* Should have base User model
+* User should have: 
+	Id,
+	Email,
+	Password,
+	FirstName,
+	LastName,
+	DateOfBirth,
+	CretedOn
+	Methods:
+		Info,
+	
+* User should be given Random Id - from 0 - 1_000_000_000
+* Should have @, should contain 2 parts, second part should contain . and should be at least 6 characters long
+* Should create service(class) for validation
+* User info that needs to be printed is FirstName, LastName, Dob
+* Create some collection for storing users - should hard coded min 3 users for testing purpose
+* Print welcome message on login and print all users
