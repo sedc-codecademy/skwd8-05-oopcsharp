@@ -7,6 +7,7 @@ namespace AcademyApp.Helpers
 {
     public class ParticipantHelper
     {
+        // wrapper class for the FindParticipantByRole method
         public static void FindParticipantByRole(AcademyRole role, Participant[] participants)
         {
             foreach (var participant in participants)

@@ -12,8 +12,10 @@ namespace SubjectServices
 
         public int Code;
 
+        // constructor
         public Tooling()
         {
+            // using static method GenerateSubjectCode() from the internal class SubjectCodeGenerator
             Code = SubjectCodeGenerator.GenerateSubjectCode();
         }
     }
