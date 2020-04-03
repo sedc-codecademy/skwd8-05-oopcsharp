@@ -1,4 +1,4 @@
-# Homework Class 5 📒
+# Homework Class 6 📒
 
 ## Task 1
 Create an ATM application. A customer should be able to authenticate with card number and pin and should be greeted with a message greeting them by full name. After that they can choose one of the following:
