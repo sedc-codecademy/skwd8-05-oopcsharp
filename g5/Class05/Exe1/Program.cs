@@ -1,4 +1,6 @@
 ﻿using System;
+using Newtonsoft.Json;
+using Models;
 
 namespace Exe1
 {
@@ -17,6 +19,8 @@ namespace Exe1
 
             Console.WriteLine(firstUser.UserInfo());
             Console.WriteLine(secondUser.UserInfo());
+
+            string json = JsonConvert.SerializeObject(firstUser);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Exe1
+﻿namespace Models
 {
     public class User
     {
@@ -11,9 +11,9 @@
             string info = $"{FirstName} {LastName} - {Age}";
             return info;
         }
-        
+
         public User() { }
-        
+
         public User(string firstName, string lastName, int age)
         {
             FirstName = firstName;
