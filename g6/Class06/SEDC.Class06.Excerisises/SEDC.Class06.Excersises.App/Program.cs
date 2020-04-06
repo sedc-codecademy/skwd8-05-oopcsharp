@@ -60,8 +60,8 @@ namespace SEDC.Class06.Excersises.App
             return new User[]
             {
                 new User("bob_bobsi@example.com", "eXample6", "Bob", "Bobski",  new DateTime(1979, 05, 25)),
-                new User("trajanstevkovski@gmail.com", "Password5%", "Trajan", "Stevkovski",  new DateTime(1987, 04, 15)),
-                new User("tosho_todorovski@yahoo.com", "Password5%","Tosho", "Todorovski",  new DateTime(1990, 06, 03))
+                new User("trajanstevkovski@gmail.com", "tesT4444", "Trajan", "Stevkovski",  new DateTime(1987, 04, 15)),
+                new User("tosho_todorovski@yahoo.com", "1234Test","Tosho", "Todorovski",  new DateTime(1990, 06, 03))
             };
         }
 
