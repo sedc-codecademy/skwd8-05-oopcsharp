@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class5.DomainServiceClasses.Domain
 {
-	class User
+	public class User
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }

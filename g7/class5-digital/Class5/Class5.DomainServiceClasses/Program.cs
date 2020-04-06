@@ -26,7 +26,10 @@ namespace Class5.DomainServiceClasses
 			// Domain classes are classes that represent logical concepts ( business logic concepts )
 			// Service classes are classes that represent functional concepts ( organizing methods and programming values better )
 
-			Console.WriteLine("Hello World!");
+			Console.WriteLine("Welcome to the Bookthron 3000");
+			Console.WriteLine("1) Log in");
+			Console.WriteLine("2) Register");
+			int initChoice = 
 			// Example 1: Call a service class
 			//UserService userService = new UserService();
 			//userService.LogIn("", "");
@@ -37,6 +40,9 @@ namespace Class5.DomainServiceClasses
 			Console.WriteLine("Enter password");
 			string password = Console.ReadLine();
 			User loggedInUser = _userService.LogIn(username, password);
+			User random = new User();
+			random.FirstName = "BillAgain";
+			loggedInUser.FirstName = "Bill";
 			if (loggedInUser == null) Console.WriteLine("Username or password is wrong...");
 			else Console.WriteLine($"Welcome {loggedInUser.FirstName}!");
 			Console.ReadLine();
@@ -51,6 +57,13 @@ namespace Class5.DomainServiceClasses
 			// 7. It compares the username and password and returns either the user or null
 			// 8. We check if the result is null, we give an error message
 			// 9. If the result is not null then we Welcome the user
+
+			// While loop
+			// Infinite while loop without any ReadLine anywhere -> Run forever -> Lag the PC
+			// Why? -> The computer runs thorugh the loop with as much speed as possible and it never stops
+			// Infinite while loop with a lot of ReadLine code -> Runs until it hits break -> Does not lag PC
+			// Why? -> Runs code until it hits ReadLine -> When it hits ReadLine it waits and does not run anything
+
 		}
 	}
 }
