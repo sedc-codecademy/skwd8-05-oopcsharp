@@ -37,5 +37,16 @@ namespace Class5.DomainServiceClasses.Services
 			}
 			return result;
 		}
+		public bool RunAgain()
+		{
+			while (true)
+			{
+				Console.WriteLine("Would you like to run again? Y/N");
+				string answer = Console.ReadLine();
+				Console.Clear();
+				if (answer.ToLower() == "y") return true;
+				if (answer.ToLower() == "n") return false;
+			}
+		}
 	}
 }

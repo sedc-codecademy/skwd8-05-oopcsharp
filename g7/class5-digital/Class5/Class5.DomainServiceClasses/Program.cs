@@ -51,71 +51,74 @@ namespace Class5.DomainServiceClasses
 			// Domain vs Service classes
 			// Domain classes are classes that represent logical concepts ( business logic concepts )
 			// Service classes are classes that represent functional concepts ( organizing methods and programming values better )
-			int initChoice;
 			while (true)
 			{
-				Console.WriteLine("Welcome to the Bookthron 3000");
-				Console.WriteLine("1) Log in");
-				Console.WriteLine("2) Register");
-				initChoice = _helperService.ValidatePositiveNumber(Console.ReadLine(), 2);
-				if (initChoice == -1) continue;
-				break;
-			}
+				int initChoice;
+				while (true)
+				{
+					Console.WriteLine("Welcome to the Bookthron 3000");
+					Console.WriteLine("1) Log in");
+					Console.WriteLine("2) Register");
+					initChoice = _helperService.ValidatePositiveNumber(Console.ReadLine(), 2);
+					if (initChoice == -1) continue;
+					break;
+				}
 
-			if (initChoice == 1)
-			{
-				while (true)
+				if (initChoice == 1)
 				{
-					Console.WriteLine("Enter username");
-					string username = Console.ReadLine();
-					Console.WriteLine("Enter password");
-					string password = Console.ReadLine();
-					User loggedInUser = _userService.LogIn(username, password);
-					User random = new User();
-					random.FirstName = "BillAgain";
-					loggedInUser.FirstName = "Bill";
-					if (loggedInUser == null)
+					while (true)
 					{
-						Console.WriteLine("Username or password is wrong...");
-						Console.ReadLine();
-						continue;
+						Console.WriteLine("Enter username");
+						string username = Console.ReadLine();
+						Console.WriteLine("Enter password");
+						string password = Console.ReadLine();
+						User loggedInUser = _userService.LogIn(username, password);
+						User random = new User();
+						if (loggedInUser == null)
+						{
+							Console.WriteLine("Username or password is wrong...");
+							Console.ReadLine();
+							continue;
+						}
+						_loggedUser = loggedInUser;
+						break;
 					}
-					_loggedUser = loggedInUser;
-					break;
 				}
-			}
-			else if (initChoice == 2)
-			{
-				while (true)
+				else if (initChoice == 2)
 				{
-					Console.WriteLine("Enter first name:");
-					string firstName = Console.ReadLine();
-					Console.WriteLine("Enter last name:");
-					string lastName = Console.ReadLine();
-					Console.WriteLine("Enter username:");
-					string username = Console.ReadLine();
-					Console.WriteLine("Enter password:");
-					string password = Console.ReadLine();
-					User newUser = new User()
+					while (true)
 					{
-						FirstName = firstName,
-						LastName = lastName,
-						Username = username,
-						Password = password
-					};
-					User registeredUser = _userService.Register(newUser);
-					if (registeredUser == null)
-					{
-						Console.WriteLine("There was an invalid input. Please try again...");
-						Console.ReadLine();
-						continue;
+						Console.WriteLine("Enter first name:");
+						string firstName = Console.ReadLine();
+						Console.WriteLine("Enter last name:");
+						string lastName = Console.ReadLine();
+						Console.WriteLine("Enter username:");
+						string username = Console.ReadLine();
+						Console.WriteLine("Enter password:");
+						string password = Console.ReadLine();
+						User newUser = new User()
+						{
+							FirstName = firstName,
+							LastName = lastName,
+							Username = username,
+							Password = password
+						};
+						User registeredUser = _userService.Register(newUser);
+						if (registeredUser == null)
+						{
+							Console.WriteLine("There was an invalid input. Please try again...");
+							Console.ReadLine();
+							continue;
+						}
+						_loggedUser = registeredUser;
+						break;
 					}
-					_loggedUser = registeredUser;
-					break;
 				}
+				Console.WriteLine($"Welcome {_loggedUser.FirstName}!");
+				Console.ReadLine();
+				bool runAgain = _helperService.RunAgain();
+				if (!runAgain) break;
 			}
-			Console.WriteLine($"Welcome {_loggedUser.FirstName}!");
-			Console.ReadLine();
 		}
 	}
 }
