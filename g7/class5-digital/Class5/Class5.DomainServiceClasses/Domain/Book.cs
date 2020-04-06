@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Class5.DomainServiceClasses.Domain
 {
-	class Book
+	public class Book
 	{
 		public string Title { get; set; }
 		public string Author { get; set; }
