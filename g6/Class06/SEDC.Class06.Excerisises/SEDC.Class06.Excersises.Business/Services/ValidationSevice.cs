@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SEDC.Class06.Excersises.Business.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -60,6 +61,18 @@ namespace SEDC.Class06.Excersises.Business.Services
             }
 
             return countUpperLetters != 0 && countDigits != 0;
+        }
+
+        public bool IsEmailUnique(string email, User[] users)
+        {
+            foreach (var user in users)
+            {
+                if (user.Email.ToLower() == email.ToLower())
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
