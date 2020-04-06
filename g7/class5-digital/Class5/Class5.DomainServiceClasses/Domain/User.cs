@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Class5.DomainServiceClasses.Domain
 {
+	// User -> multile habits -> mutliple records
 	public class User
 	{
 		public string FirstName { get; set; }

@@ -66,6 +66,13 @@ namespace Class5.DomainServiceClasses.Services
 			if (!hasNumber) return false;
 			return true;
 		}
+		public void PrintUsers()
+		{
+			foreach (User user in Users)
+			{
+				Console.WriteLine($"{user.FirstName} {user.LastName}");
+			}
+		}
 		public User Register(User user)
 		{
 			if(!_helperService.ValidateString(user.FirstName, 2) ||
