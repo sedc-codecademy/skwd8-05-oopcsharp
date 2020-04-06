@@ -5,12 +5,15 @@ using System.Text;
 
 namespace SEDC.Class06.Excersises.Business.Services
 {
-    public class Authentication
+    public static class Authentication
     {
         public static User Register(User[] users, ValidationSevice validationSevice)
         {
             string email = EnterEmail(validationSevice, users);
             string password = EnterPassword(validationSevice);
+            // Same with return
+            // User user = CreateUser(email, password);
+            // return user;
             return CreateUser(email, password);
         }
 
