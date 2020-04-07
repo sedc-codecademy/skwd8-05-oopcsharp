@@ -1,0 +1,11 @@
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\bin\Debug\netcoreapp2.1\HeroesJorney.deps.json
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\bin\Debug\netcoreapp2.1\HeroesJorney.runtimeconfig.json
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\bin\Debug\netcoreapp2.1\HeroesJorney.runtimeconfig.dev.json
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\bin\Debug\netcoreapp2.1\HeroesJorney.dll
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\bin\Debug\netcoreapp2.1\HeroesJorney.pdb
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\obj\Debug\netcoreapp2.1\HeroesJorney.csprojAssemblyReference.cache
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\obj\Debug\netcoreapp2.1\HeroesJorney.csproj.CoreCompileInputs.cache
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\obj\Debug\netcoreapp2.1\HeroesJorney.AssemblyInfoInputs.cache
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\obj\Debug\netcoreapp2.1\HeroesJorney.AssemblyInfo.cs
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\obj\Debug\netcoreapp2.1\HeroesJorney.dll
+C:\Users\DraganGelevski\source\repos\HeroesJorney\HeroesJorney\obj\Debug\netcoreapp2.1\HeroesJorney.pdb

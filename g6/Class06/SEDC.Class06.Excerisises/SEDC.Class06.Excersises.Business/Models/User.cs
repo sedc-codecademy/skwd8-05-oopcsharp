@@ -27,7 +27,7 @@ namespace SEDC.Class06.Excersises.Business.Models
 
         public string GetInfo()
         {
-            return string.Format("Name: {0} Date of birth: {1}", GetFullName(), DateOfBirth.Date);
+            return string.Format("Id: {0} Name: {1} Date of birth: {2}", Id, GetFullName(), DateOfBirth.Date);
         }
 
         public string GetFullName()
