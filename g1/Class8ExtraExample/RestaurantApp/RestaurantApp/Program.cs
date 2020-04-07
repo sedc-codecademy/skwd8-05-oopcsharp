@@ -1,5 +1,5 @@
-﻿using Library.Enums;
-using Library.Models;
+﻿using RestaurantApp.Enums;
+using RestaurantApp.Models;
 using RestaurantProject.Models;
 using System;
 
@@ -15,7 +15,7 @@ namespace Library
                 LastName = "Bobsky",
                 Age = 22,
                 Gender = Gender.Male,
-                Orders = new Order[] {}
+                Orders = new Order[] { }
             };
 
             Costumer costumer = new Costumer("John", "Doe");

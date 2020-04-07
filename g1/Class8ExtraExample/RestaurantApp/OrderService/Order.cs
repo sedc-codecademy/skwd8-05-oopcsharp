@@ -15,6 +15,6 @@ namespace RestaurantProject.Models
         public int OrderNumber;
         public string[] Products;
         public double OrderPrize;
-        
+
     }
 }

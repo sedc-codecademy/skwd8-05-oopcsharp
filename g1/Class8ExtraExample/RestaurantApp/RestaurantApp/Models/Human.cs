@@ -1,9 +1,9 @@
-﻿using Library.Enums;
+﻿using RestaurantApp.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RestaurantProject.Models
+namespace RestaurantApp.Models
 {
     public class Human
     {

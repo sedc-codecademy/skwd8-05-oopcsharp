@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Library.Enums
+namespace RestaurantApp.Enums
 {
     public enum Gender
     {
