@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestaurantProject", "Library\RestaurantProject.csproj", "{7CED6829-673B-4EA3-8CD7-62EE832923D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductServices", "ProductServices\ProductServices.csproj", "{F7E12BB4-6185-4631-A24C-0D4A8500EB22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService", "ProductServices\OrderService.csproj", "{F7E12BB4-6185-4631-A24C-0D4A8500EB22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

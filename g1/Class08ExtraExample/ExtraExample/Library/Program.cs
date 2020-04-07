@@ -29,7 +29,9 @@ namespace Library
             secondCostumer.Waiter = waiter;
 
             costumer.MakeOrder(new Order() { Products = new string[] { "Pizza", "Coca Cola" }, OrderPrize = 100.00 });
+
             Console.WriteLine("-------------------------------------------------------------------------------------");
+
             var secondCostumerOrder = new Order()
             {
                 Products = new string[] { "Beafsteak", "Skopsko", "Chocolate cake" },
