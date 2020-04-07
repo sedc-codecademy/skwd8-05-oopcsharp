@@ -4,8 +4,10 @@ using System.Text;
 
 namespace ConsoleApp
 {
+    // Login Service
     public class LoginService
     {
+        // One way for using a LogIn method
         public void LogIn(string userName, string password)
         {
             UserModel[] users = GetAllUsers();
@@ -30,6 +32,7 @@ namespace ConsoleApp
             }
         }
 
+        // This is a private method that helps us get all the users from an imaginary database 
         private UserModel[] GetAllUsers()
         {
             UserModel user1 = new UserModel
@@ -47,29 +50,15 @@ namespace ConsoleApp
 
             return users;
         }
-        //public void LogIn(UserModel user)
-        //{
-        //    //if (user.UserName == "sedc.academy2")
-        //    //{
-        //    //    if (user.Password == "1234")
-        //    //    {
-        //    //        Console.WriteLine("You successfully logged in");
-        //    //    }
-        //    //    else
-        //    //    {
-        //    //        Console.WriteLine("Password is wrong");
-        //    //    }
-        //    //}
-        //    //else
-        //    //{
-        //    //    Console.WriteLine("User does not exists");
-        //    //}
 
-        //    if (user.UserName == "sedc.academy2" && user.Password == "1234")
-        //        Console.WriteLine("You successfully logged in");
-        //    else
-        //        Console.WriteLine("username or password is wrong");
-        //}
+        // Another way of using LogIn method
+        public void LogIn(UserModel user)
+        {
+            if (user.UserName == "sedc.academy2" && user.Password == "1234")
+                Console.WriteLine("You successfully logged in");
+            else
+                Console.WriteLine("username or password is wrong");
+        }
 
         public void LogOut(UserModel user)
         {

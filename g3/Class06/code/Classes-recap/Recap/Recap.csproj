@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KeSmilisimeIme\KeSmilisimeIme.csproj" />
+    <ProjectReference Include="..\ExternalProject\ExternalProject.csproj" />
   </ItemGroup>
 
 </Project>
