@@ -1,15 +1,12 @@
 ﻿using SEDC.eStore.Entities.Enums;
 using SEDC.eStore.Entities.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SEDC.eStore.Data.Database
 {
     public class Database
     {
-        public Product[] Products { get; set; }
-        public User[] Users { get; set; }
+        protected Product[] Products { get; set; }
+        protected User[] Users { get; set; }
 
         public Database()
         {
