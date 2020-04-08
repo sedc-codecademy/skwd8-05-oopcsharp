@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Class6.Domain.Enumerations;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +8,7 @@ namespace Class6.Domain
 	public class Dog
 	{
 		public string Name { get; set; }
-		public string Breed { get; set; }
+		public DogBreed Breed { get; set; }
 		public int Age { get; set; }
 		public bool HasOwner { get; set; }
 		public Person Owner { get; set; }
@@ -16,13 +17,14 @@ namespace Class6.Domain
 		{
 			// Add logic to the constructor
 			Name = "No name";
-			Breed = "Labrador";
+			Breed = DogBreed.Unknown;
 			Age = 0;
 			HasOwner = false;
 			Console.WriteLine("Dog with no data was created!");
 		}
 		// Second constructor
-		public Dog(string name, string breed, int age)
+		// Dog benny = new Dog("benny", DogBreed.GolderRetriever, 2);
+		public Dog(string name, DogBreed breed, int age)
 		{
 			Name = name;
 			Breed = breed;
@@ -31,7 +33,8 @@ namespace Class6.Domain
 			Console.WriteLine("Dog with no owner was created!");
 		}
 		// Third constructor
-		public Dog(string name, string breed, int age, Person owner)
+		// Dog Zoe = new Dog("Zoe", DogBreed.Husky, 1, bob);
+		public Dog(string name, DogBreed breed, int age, Person owner)
 		{
 			Name = name;
 			Breed = breed;
