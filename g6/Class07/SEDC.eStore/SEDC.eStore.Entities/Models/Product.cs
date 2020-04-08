@@ -8,5 +8,10 @@ namespace SEDC.eStore.Entities.Models
         public string Name { get; set; }
         public int Price { get; set; }
         public Category Category { get; set; }
+
+        public Product()
+            : base()
+        {
+        }
     }
 }

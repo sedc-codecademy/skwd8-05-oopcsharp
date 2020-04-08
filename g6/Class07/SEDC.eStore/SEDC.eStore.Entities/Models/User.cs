@@ -13,5 +13,19 @@ namespace SEDC.eStore.Entities.Models
         public string City { get; set; }
         public Account Account { get; set; }
         public Cart Cart { get; set; }
+
+        public User(string email, string password, string fullName)
+            : base()
+        {
+            Email = email;
+            Password = password;
+            FullName = fullName;
+            Cart = new Cart();
+        }
+
+        public void AddAccount(Account account)
+        {
+            Account = account;
+        }
     }
 }
