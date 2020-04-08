@@ -1,6 +1,8 @@
 # Inheritance Homework 🎉
 
- - ### Create the inheritance chain as described on the `inheritance.jpg` file 
+![Ingeritance requirement](../../images/inheritance.jpg)
+
+ - ### Create the inheritance chain as described on image above ☝🏻 
  - ### Every class should have the required properties and methods
  - ### Regarding the method implementation use your creativity and imagination 🐱‍👤
  - ### Don't forget to structure the code following the good practices we mentioned
