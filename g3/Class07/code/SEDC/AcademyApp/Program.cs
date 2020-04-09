@@ -27,17 +27,17 @@ namespace AcademyApp
 
 
             // Subjects
-            Subject htmlCss = new Subject("HTML/CSS", 10, false);
-            Subject javaScriptBasic = new Subject("Basic JavaScript", jsBasicStudents, 10, false);
-            Subject javaScriptAdvanced = new Subject("Advanced JavaScript", jsAdvancedStudents, 15, false);
-            Subject cSharpBasic = new Subject("Basic C#", 10, false);
-            Subject cSharpAdvanced = new Subject("Advanced C#", 15, false);
+            Subject htmlCss = new Subject("HTML/CSS", 10);
+            Subject javaScriptBasic = new Subject("Basic JavaScript", 10, jsBasicStudents);
+            Subject javaScriptAdvanced = new Subject("Advanced JavaScript", 15, jsAdvancedStudents);
+            Subject cSharpBasic = new Subject("Basic C#", 10);
+            Subject cSharpAdvanced = new Subject("Advanced C#", 15);
 
             Subject[] webSubjects = new Subject[] { htmlCss, javaScriptBasic, javaScriptAdvanced, cSharpBasic };
 
 
             // Academy
-            Academy web = new Academy("Web", "Full Stack Web Development", webSubjects, false);
+            Academy web = new Academy("Web", "Full Stack Web Development", webSubjects);
 
 
 
@@ -67,17 +67,17 @@ namespace AcademyApp
 
 
             // Subjects
-            Subject drawing = new Subject("Drawing", 5, false);
-            Subject photoshop = new Subject("Photoshop", photoshopStudents, 10, false);
-            Subject ilustrator = new Subject("Ilustrator", ilustratorStudents, 15, false);
-            Subject art = new Subject("Art", 10, false);
+            Subject drawing = new Subject("Drawing", 5);
+            Subject photoshop = new Subject("Photoshop", 10, photoshopStudents);
+            Subject ilustrator = new Subject("Ilustrator", 15, ilustratorStudents);
+            Subject art = new Subject("Art", 10);
 
             Subject[] designSubjects = new Subject[] { drawing, photoshop, art };
 
 
 
             // Academy
-            Academy design = new Academy("Web", "Full Stack Web Development", designSubjects, false);
+            Academy design = new Academy("Web", "Full Stack Web Development", designSubjects);
 
 
 
