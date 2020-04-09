@@ -8,7 +8,6 @@ namespace Lotary.Entities
     {
         public void GetRandomTicket()
         {
-            Console.WriteLine("GETTING RANDOM TICKET");
         }
     }
 }
