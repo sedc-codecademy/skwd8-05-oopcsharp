@@ -10,5 +10,6 @@ namespace Domain
         public string LastName { get; set; }
         public int Age { get; set; }
         public int CardNumber { get; set; }
+        public Subject CurrentSubject { get; set; } // This property is from Task 2
     }
 }

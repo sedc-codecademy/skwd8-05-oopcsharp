@@ -21,7 +21,15 @@ namespace Services
 
         public void StartSubject(Academy academy, string subjectName)
         {
-
+            foreach (Subject subject in academy.Subjects)
+            {
+                if (subject.Name == subjectName)
+                {
+                    if (subject.IsStarted)
+                        subject.IsStarted = true; 
+                }
+            }
+            // Need implementation for student.CurrentSubject property (BONUS)
         }
 
         public void EndSubject(Academy academy, string subjectName)
@@ -31,7 +39,13 @@ namespace Services
 
         public void AddStudentToSubject(Subject subject, Student student)
         {
-
+            if (subject != null && student != null)
+            {
+                Student[] students = subject.Students;
+                Array.Resize(ref students, students.Length + 1);
+                students[students.Length - 1] = student;
+                subject.Students = students;
+            }
         }
 
         public void AddSubjectToAcademy(Academy academy, Subject subject)
