@@ -6,13 +6,17 @@ namespace Domain
 {
     public class Academy
     {
-        public Academy(string name, string desc, Subject[] subjects)
+        public Academy(string name, string description, Subject[] subjects)
         {
+            Name = name;
+            Description = description;
             Subjects = subjects;
-            IsStared = false;
+            IsStarted = false;
         }
 
+        public string Name { get; set; }
+        public string Description { get; set; }
         public Subject[] Subjects { get; set; }
-        public bool IsStared { get; set; }
+        public bool IsStarted { get; set; }
     }
 }
