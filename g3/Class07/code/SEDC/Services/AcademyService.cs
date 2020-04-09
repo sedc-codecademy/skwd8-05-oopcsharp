@@ -9,12 +9,14 @@ namespace Services
     {
         public void StartAcademy(Academy academy)
         {
-
+            if (!academy.IsStarted)
+                academy.IsStarted = true;
         }
 
         public void EndAcademy(Academy academy)
         {
-
+            if (academy.IsStarted)
+                academy.IsStarted = false;
         }
 
         public void StartSubject(Academy academy, string subjectName)
@@ -39,7 +41,21 @@ namespace Services
 
         public Student CreateStudent(string name, string lastName, int age, int cardNumber)
         {
-            return null; // Remove this line, it's here just as a placeholder so that the compiler doesn't give us errors
+            //Student student = new Student();
+            //student.Name = name;
+            //student.LastName = lastName;
+            //student.Age = age;
+            //student.CardNumber = cardNumber;
+
+            Student student = new Student
+            {
+                Name = name,
+                LastName = lastName,
+                Age = age,
+                CardNumber = cardNumber
+            };
+
+            return student;
         }
     }
 }
