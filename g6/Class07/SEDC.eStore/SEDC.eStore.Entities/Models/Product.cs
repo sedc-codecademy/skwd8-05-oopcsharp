@@ -13,5 +13,10 @@ namespace SEDC.eStore.Entities.Models
             : base()
         {
         }
+
+        public string Info()
+        {
+            return $"Id: {Id}, Name: {Name}, Price: {Price} MKD";
+        }
     }
 }

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.eStore.Business\SEDC.eStore.Business.csproj" />
+    <ProjectReference Include="..\SEDC.eStore.Data\SEDC.eStore.Data.csproj" />
+    <ProjectReference Include="..\SEDC.eStore.Entities\SEDC.eStore.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
