@@ -37,9 +37,11 @@ The salary is by default 500 and role is default Sales
 
 ### **Bonus** 😍
 
-### *Add a class called `Contractor` that inherits from `Employee`. The employee should have properties: *
+---
+
+### Add a class called `Contractor` that inherits from `Employee`. The employee should have properties: 
 - WorkHours ( double ), 
 - PayPerHour ( int ) and
 - Responsible (Manager ( object )).
 
-### *The `GetSalary` method should be overridden to return `WorkHours * PayPerHour` and also change the `Salary` property to that amount*
+### The `GetSalary` method should be overridden to return `WorkHours * PayPerHour` and also change the `Salary` property to that amount
