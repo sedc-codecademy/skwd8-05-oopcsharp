@@ -1,5 +1,5 @@
 
-# **Workshop Excercise** 👀
+# **Workshop Excercise** - CompanyApp 👀
 
 ## Part 01
 
