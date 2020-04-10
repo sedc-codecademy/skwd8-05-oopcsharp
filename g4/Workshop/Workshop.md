@@ -34,3 +34,12 @@ The salary is by default 500 and role is default Sales
 
 ### *Create one manager and add bonus to his salary, then print the salary.* 🤓
 ### *Create 3 sales people and extend their revenue, then print their salaries.* 🤯
+
+### **Bonus** 😍
+
+### *Add a class called `Contractor` that inherits from `Employee`. The employee should have properties: *
+- WorkHours ( double ), 
+- PayPerHour ( int ) and
+- Responsible (Manager ( object )).
+
+### *The `GetSalary` method should be overridden to return `WorkHours * PayPerHour` and also change the `Salary` property to that amount*
