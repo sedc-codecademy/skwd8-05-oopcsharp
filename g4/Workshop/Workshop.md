@@ -22,7 +22,7 @@ The salary is by default 500 and role is default Sales
 - Create a method called ExtendSuccessRevenue that will get a number and set the SuccessSaleRevenue to that value
 - Override the GetSalary method to return the value of the salary plus bonus that is calculated by the SuccessSaleRevenue. 
 	- If less or equal to 2000 then add 500 bonus
-	- If larger than 2000 but less or equal than 500 then add 800 bonus
+	- If larger than 2000 but less or equal than 5000 then add 800 bonus
 	- If larger than 5000 add 2000 bonus
 
 ## Part 03
