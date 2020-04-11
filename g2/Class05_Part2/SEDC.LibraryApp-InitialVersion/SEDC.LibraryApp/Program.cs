@@ -14,7 +14,6 @@ namespace SEDC.LibraryApp
     // 8. Implement get all books method in the book service 
 
 
-
     class Program
     {
         private static UserService _userService = new UserService();
@@ -24,7 +23,6 @@ namespace SEDC.LibraryApp
 
         static void Main(string[] args)
         {
-
             while (true)
             {
                 Console.WriteLine("Do you want to login or register");
@@ -42,7 +40,7 @@ namespace SEDC.LibraryApp
                         string password = Console.ReadLine();
                         _loggedUser = _userService.LogIn(username, password);
 
-                        if(_loggedUser == null)
+                        if (_loggedUser == null)
                         {
                             _helperService.ErrorMessage("Wrong username or password");
                             Console.ReadLine();
@@ -55,13 +53,12 @@ namespace SEDC.LibraryApp
                         }
                     }
                 }
-                //Continue for HOMEWORK... if the user want to register
-
-                if(_loggedUser.Role == "user")
+                 //Implement register logic for homework
+                if (_loggedUser.Role == "user")
                 {
                     _bookService.PrintAllBooks();
                 }
-                else if(_loggedUser.Role == "admin")
+                else if (_loggedUser.Role == "admin")
                 {
                     _userService.PrintUsers();
                 }
