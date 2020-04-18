@@ -40,8 +40,9 @@ If you are not comfortable with that, then use an ordinary folder structure.
 *	`PhoneNumber`
 *	`DateOfRegistration`
 *	`Role` => enum or class (it’s up to you)
-*	`DisplayInfo` => Method that will display info about every user, in format: 
-○	1. #firstName #lastName | Registered on: #dateOfRegistration
+*	`DisplayInfo` => Method that will display info about every user, in format:
+
+   ○	1. #firstName #lastName | Registered on: #dateOfRegistration
 
 &nbsp; 
 
