@@ -9,15 +9,17 @@ namespace Class07.Inheritance.Entities
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public AnimalType Type { get; set; } // Unknow, Dog, Cat or Other
-		public void Eat()
+		// virtual - keyword that will make the child classes that inherit from animal to change this method if they want
+		public virtual void Eat()
 		{
 			Console.WriteLine($"The {Type} animal named {Name} is eating!");
 		}
-		public string PrintInfo()
+		public virtual string PrintInfo()
 		{
 			return $"Id: {Id}, Animal: {Type}, Name: {Name}";
 		}
 		// Animal bob = new Animal(); -> Create an empty animal with the type Unknown
+		// This constructor is also the default one
 		public Animal()
 		{
 			Type = AnimalType.Unknown;
