@@ -1,8 +1,9 @@
 ﻿using SEDC.LibraryApp.Domain;
+using SEDC.LibraryApp.DomainModels.User;
 using SEDC.LibraryApp.Services;
 using System;
 
-namespace SEDC.LibraryApp
+namespace SEDC.LibraryApp_Refactored
 {
     // 1. Folder structure for our app - Done
     // 2. Create domain classes User and Book - Done
@@ -14,7 +15,6 @@ namespace SEDC.LibraryApp
     // 8. Implement get all books method in the book service 
 
 
-
     class Program
     {
         private static UserService _userService = new UserService();
@@ -24,7 +24,6 @@ namespace SEDC.LibraryApp
 
         static void Main(string[] args)
         {
-
             while (true)
             {
                 Console.WriteLine("Do you want to login or register");
@@ -42,7 +41,7 @@ namespace SEDC.LibraryApp
                         string password = Console.ReadLine();
                         _loggedUser = _userService.LogIn(username, password);
 
-                        if(_loggedUser == null)
+                        if (_loggedUser == null)
                         {
                             _helperService.ErrorMessage("Wrong username or password");
                             Console.ReadLine();
@@ -55,13 +54,49 @@ namespace SEDC.LibraryApp
                         }
                     }
                 }
-                //Continue for HOMEWORK... if the user want to register
-
-                if(_loggedUser.Role == "user")
+                else if(loginChoice == 2)
                 {
+                    while (true)
+                    {
+                        Console.WriteLine("Enter the first name:");
+                        string firstName = Console.ReadLine();
+                        Console.WriteLine("Enter the last name:");
+                        string lastName = Console.ReadLine();
+                        Console.WriteLine("Enter the username:");
+                        string username = Console.ReadLine();
+                        Console.WriteLine("Enter password:");
+                        string password = Console.ReadLine();
+
+                        User newUser = new User(firstName, lastName, username, password);
+
+                        _loggedUser = _userService.Register(newUser);
+
+                        if(_loggedUser == null)
+                        {
+                            _helperService.ErrorMessage("Register not successfull! Please try again...");
+                            Console.ReadLine();
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            break;
+                        }
+                    }
+                }
+
+                if (_loggedUser.Role == Roles.User)
+                {
+                    //Improve the logged user workflow
+                    //Display message: Welcome #firstName #lastName. Please select an option:
+                    //Give the user an option to: 
+                    //1. Show my books
+                    //2. Show all books
+                    //3. Borrow book
+
                     _bookService.PrintAllBooks();
                 }
-                else if(_loggedUser.Role == "admin")
+                else if (_loggedUser.Role == Roles.Admin)
                 {
                     _userService.PrintUsers();
                 }
