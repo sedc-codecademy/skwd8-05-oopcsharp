@@ -38,6 +38,8 @@ This repository will contain every piece of material about the subject. It will 
 [exercism.io](https://exercism.io/tracks/csharp/exercises) - Mostly advanced excercises without much help
 
 ## Contact
-Trainer: dblazheski96@gmail.com
+Co-Trainer: dblazheski96@gmail.com
+
+Co-Trainer: alek.kocevski@hotmail.com
 
 Assistant: vukashin@hotmail.com
