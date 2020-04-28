@@ -28,6 +28,8 @@ namespace Class07.Inheritance.Entities
 		// This is the default one
 		public Cat() : base()
 		{
+			//ChipNumber = 141414214; // We can't access this since it is private
+			OwnerId = 1; // We can access this since it is protected and we are a child class of Animal
 			Console.WriteLine("Cat was created!");
 		}
 		// Constructor v.1
