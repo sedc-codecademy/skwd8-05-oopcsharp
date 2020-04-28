@@ -1,4 +1,4 @@
-# Homework Class 7 📒
+# Homework Class 8 📒
 
 ## Task 1
 * Create a SalesPerson class that inherits from Employee and has the following properties:
