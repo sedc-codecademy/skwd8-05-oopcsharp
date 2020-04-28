@@ -1,7 +1,5 @@
 # Homework: Movie Store Part 2 🎞
 
----
-
 ##### Create a console application that will help a local Movie store to manage its work. There should be two types of users: `Employee` and `User`. Each of them can login
 * Further the Employee can:
     * See all the registered members in the movie store
@@ -41,7 +39,8 @@ Create a service, that will contain all the methods that you will need for some 
 
 ### Task 3
 When you are done with the implementation of the services, it's time for the interaction part, where you will implement the logic of how should the whole workflow go. Here you should think of what will be required from the user and how those inputs will be used. 
-* Try to implement an infinite workflow, so that the user is able to do more things that he/she wants until 'N' (for No) is entered. 
+
+\* Try to implement an infinite workflow, so that the user is able to do more things that he/she wants until 'N' (for No) is entered. 
 
 
 **Note: If you can't figure out which methods and into which service you're gonna need, then scroll a little bit up in the description section, and check all the functionalities that the `Employee` and `User` should have.**
