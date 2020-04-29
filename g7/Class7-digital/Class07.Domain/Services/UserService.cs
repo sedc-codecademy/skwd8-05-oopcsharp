@@ -21,6 +21,8 @@ namespace Class07.Domain.Services
 {
 	public class UserService
 	{
+		// Underscore in C# means private field ( Convention )
+		// Private field is a private variable like entity inside a lass ( no get set )
 		private HelperService _helperService = new HelperService();
 		private User CurrentUser;
 		private User[] Users; 

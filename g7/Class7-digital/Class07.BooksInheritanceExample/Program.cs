@@ -8,6 +8,7 @@ namespace Class07.BooksInheritanceExample
 	{
 		private static UserService _userService = new UserService();
 		private static HelperService _helperService = new HelperService();
+		private static BookService _bookService = new BookService();
 		private static User _loggedUser = null;
 		static void Main(string[] args)
 		{
@@ -80,6 +81,7 @@ namespace Class07.BooksInheritanceExample
 				} 
 				else if (_loggedUser.Role == UserRole.Standard)
 				{
+					_bookService.ChooseHardCover();
 					Console.WriteLine($"Welcome {_loggedUser.FirstName}!");
 				}
 				Console.ReadLine();
