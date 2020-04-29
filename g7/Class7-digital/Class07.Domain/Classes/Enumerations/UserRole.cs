@@ -11,7 +11,7 @@ namespace Class07.Domain.Classes
 	{
 		// I am not adding a default value
 		// I want default to be Standard
-		Administrator,
-		Standard
+		Standard,
+		Administrator
 	}
 }
