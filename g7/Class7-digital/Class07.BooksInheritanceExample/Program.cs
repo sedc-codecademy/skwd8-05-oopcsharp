@@ -1,5 +1,5 @@
-﻿using Class07.BooksInheritanceExample.Domain;
-using Class07.BooksInheritanceExample.Services;
+﻿using Class07.Domain.Classes;
+using Class07.Domain.Services;
 using System;
 
 namespace Class07.BooksInheritanceExample
@@ -74,7 +74,14 @@ namespace Class07.BooksInheritanceExample
 						break;
 					}
 				}
-				Console.WriteLine($"Welcome {_loggedUser.FirstName}!");
+				if(_loggedUser.Role == UserRole.Administrator)
+				{
+					Console.WriteLine($"Hey {_loggedUser.FirstName}, the best admin in the world!");
+				} 
+				else if (_loggedUser.Role == UserRole.Standard)
+				{
+					Console.WriteLine($"Welcome {_loggedUser.FirstName}!");
+				}
 				Console.ReadLine();
 				bool runAgain = _helperService.RunAgain();
 				if (!runAgain) break;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Class07.BooksInheritanceExample.Services
+namespace Class07.Domain.Services
 {
 	class BookService
 	{

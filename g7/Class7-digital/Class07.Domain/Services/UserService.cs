@@ -1,34 +1,35 @@
-﻿using Class07.BooksInheritanceExample.Domain;
+﻿using Class07.Domain.Classes; // This namespace makes ALL classes available
+// IF the two classes had different namespaces we will have to write them both here in order to work
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Class07.BooksInheritanceExample.Services
+// NAMESPACES RULEBOOK - Dragan Gelevski 2020
+// A namespace is an address
+// You can't use a class without USING it's address
+// We must write the namespace of the class in order to use it somewhere ( in another namespace )
+// Classes that are in the same namspace can use each other functionality
+// Multiple classes can have the same namespace 
+// All those classes will be available if someone calls their address ( USING NAMESPACE )
+// Folders do not affect the addresses of the classes
+// Classes can be in a different folder and share an address ( same namespace )
+// - > In this case with using we get both of them
+// Classes can be in the same folder but have different addresses ( different namespace )
+// - > In this case with using we get one and we have to write another using for the other class
+
+namespace Class07.Domain.Services
 {
 	public class UserService
 	{
 		private HelperService _helperService = new HelperService();
 		private User CurrentUser;
-		// private field ( like a varialbe to keep stuff in it locally for this class )
-		private User[] Users; // field -> similar to variable, keeps some data for internal use of the class
+		private User[] Users; 
 		public UserService()
 		{
 			Users = new User[]
 			{
-				new User()
-				{
-					FirstName = "Bob",
-					LastName = "Bobksy",
-					Username = "Bob22",
-					Password = "bobbest1"
-				},
-				new User()
-				{
-					FirstName = "Jill",
-					LastName = "Wayne",
-					Username = "Jillcool",
-					Password = "sparkythedog1"
-				}
+				new User("Bob", "Bobksy", "bob22", "bobbest1", UserRole.Administrator),
+				new User("Jill", "Wayne", "Jillcool","sparkythedog1", UserRole.Standard)
 			};
 		}
 		public User LogIn(string username, string password)
@@ -41,19 +42,13 @@ namespace Class07.BooksInheritanceExample.Services
 					return user;
 				}
 			}
-			// null is basically saying that there is a class but the class has no object instance
-			return null; // Our way of saying no user like that
+			return null; 
 		}
-		// Validate Password can only be used for passwords
-		// This is logic connected to registering
-		// Validate String is a general method, which we can use in any logic that needs validating strings
-		// That is why it is in the Helper Service ( General purpose methods go there )
 		private bool ValidatePassword(string password)
 		{
 			if (password.Length < 7) return false;
 			char[] characters = password.ToCharArray();
 			bool hasNumber = false;
-			// bobbest12
 			foreach (char character in characters)
 			{
 				int num = 0;
@@ -70,6 +65,11 @@ namespace Class07.BooksInheritanceExample.Services
 		{
 			foreach (User user in Users)
 			{
+				// [Administrator] Bob Bobsky
+				// Fancy styling
+				Console.ForegroundColor = ConsoleColor.Green;
+				Console.Write($"[{user.Role}] ");
+				Console.ResetColor();
 				Console.WriteLine($"{user.FirstName} {user.LastName}");
 			}
 		}
@@ -82,6 +82,9 @@ namespace Class07.BooksInheritanceExample.Services
 				return null;
 			}
 			if (!ValidatePassword(user.Password)) return null;
+			// Standard role will be EVERY USER THAT REGISTERS
+			// Administrators will be added manually if there is a need for that
+			user.Role = UserRole.Standard;
 			Array.Resize(ref Users, Users.Length + 1);
 			Users[Users.Length - 1] = user;
 			return Users[Users.Length - 1];
