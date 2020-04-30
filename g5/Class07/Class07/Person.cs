@@ -34,5 +34,10 @@ namespace Class07
         {
             return $"EMBG: {Embg}";
         }
+
+        public virtual string GetBirthDate()
+        {
+            return BirthDate.ToString("dd.MM.yyyy");
+        }
     }
 }
