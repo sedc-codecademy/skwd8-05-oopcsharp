@@ -31,5 +31,15 @@ namespace Class07
 
             return info;
         }
+
+        //public new string GetBirthDate()
+        //{
+        //    return BirthDate.ToString("MM-dd-yyyy");
+        //}
+
+        public override string GetBirthDate()
+        {
+            return BirthDate.ToString("MM-dd-yyyy");
+        }
     }
 }
