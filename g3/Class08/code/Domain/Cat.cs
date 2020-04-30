@@ -9,7 +9,7 @@ namespace Domain
         public string Tail { get; set; }
         public string Fur { get; set; }
 
-        public void Meow()
+        public virtual void MakeSound()
         {
             Console.WriteLine("moew moew");
         }

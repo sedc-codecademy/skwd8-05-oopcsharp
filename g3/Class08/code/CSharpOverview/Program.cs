@@ -35,7 +35,15 @@ namespace CSharpInheritance
             mirce.Eat();
             bozana.Eat(); // bozana is a Cat object but, the Eat methods belongs to Animal class, TIP: use hover on the Eat method for more information
             //rename and override Meow method
-            bozana.Meow(); // bozana is a Cat object and the Meow method belongs to Cat class
+            bozana.MakeSound(); // bozana is a Cat object and the Meow method belongs to Cat class
+
+            Tiger johny = new Tiger();
+            johny.MakeSound();
+
+            WhiteTiger jacky = new WhiteTiger();
+            jacky.MakeSound();
+            jacky.MakeATigerSound();
+
             Console.WriteLine(slave.Wings);
 
 
