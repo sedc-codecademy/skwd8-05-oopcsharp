@@ -66,6 +66,12 @@ namespace Homework.Linq
 			// Task 08
 			// find first male younger than 40
 
+			// Task 09
+			// print the names of the male persons that have firstName longer than lastName
+			
+			// Task 10
+			// print the lastNames of the female persons that have odd number of ages
+
 
 			Console.ReadLine();
         }
