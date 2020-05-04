@@ -1,4 +1,4 @@
-# Homework Class 10 📒
+# Homework Class 8 - LINQ 📒
 ## Task 1
 * Create a class Song with the following properties: Title, Length and, Genre
 * Genre is enum with - Rock, Hip_Hop, Techno and Classical
