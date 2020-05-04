@@ -13,6 +13,7 @@ namespace Class07
             student.LastName = "1";
 
             var assistent = new Assistent("Vukashin", "Obradovic");
+            trainer.GetBirthDate();
 
             Console.WriteLine(trainer.GetInfo());
             Console.WriteLine(student.GetInfo());

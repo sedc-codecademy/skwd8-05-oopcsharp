@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SEDC.Class08.Example.Data\SEDC.Class08.Example.Data.csproj" />
+    <ProjectReference Include="..\SEDC.Class08.Example.Models\SEDC.Class08.Example.Models.csproj" />
+  </ItemGroup>
+
+</Project>
