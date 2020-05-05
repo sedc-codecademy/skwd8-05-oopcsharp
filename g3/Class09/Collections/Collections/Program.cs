@@ -30,7 +30,7 @@ namespace Collections
             arrayList.Add('h'); // adding an element to the ArrayList
             arrayList.Add(stringsInArray1);
             arrayList.Remove(5); //removing an element from the ArrayList
-            Console.WriteLine(arrayList[2]);
+            Console.WriteLine(arrayList[2]); //prints the third element od the ArrayList
             goThroughCollection(arrayList, "ArrayList"); //go through the collection with the fuction created above
             Console.WriteLine("Length: " + arrayList.Count);
             Console.WriteLine(arrayList);
