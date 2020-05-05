@@ -83,10 +83,13 @@ namespace Class07.Domain.Services
 				{
 					Console.WriteLine($"{i}) {Books[i - 1].FullInfo()}");
 				}
+				// If you want to check the implemetation of a function just select it and hit F12
 				int choice = _helperService.ValidatePositiveNumber(Console.ReadLine(), Books.Length);
-				if (choice == -1) continue;
+				if (choice == -1) continue; // -1 is from the function ValidatePositiveNumber
 				return Books[choice - 1];
 			}
 		}
+
+		// TODO -> Return a book
 	}
 }
