@@ -5,10 +5,10 @@ using System;
 
 namespace SEDC.LibraryApp_Refactored
 {
-    // 1. Folder structure for our app - Done
-    // 2. Create domain classes User and Book - Done
-    // 3. Create Book and User service - in progress...
-    // 4. Writn the login questions and register questions
+    // 1. Folder structure for our app 
+    // 2. Create domain classes User and Book 
+    // 3. Create Book and User service 
+    // 4. Write the login questions and register questions
     // 5. Create a login and register method in the user service, as well as an array of users
     // 6. To validate things create a helper service
     // 7. Implement login and register methods in user service
