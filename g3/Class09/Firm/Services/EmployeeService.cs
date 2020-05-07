@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using Domain.CustomerModels;
 using Domain.EmployeeModels;
@@ -21,6 +22,12 @@ namespace Services
         {
             return new Manager(helper.GenerateId(), firstName, lastName, Role.Manager, 160, salary);
         }
+
+        public List<Manager> DeleteManagerFromList(List<Manager> managers, Manager managerToDelete)
+        {
+            managers.Remove(managerToDelete);
+            return managers;
+        }
         #endregion
 
         #region Sales methods
@@ -28,7 +35,15 @@ namespace Services
         {
             return new Sales(helper.GenerateId(), firstName, lastName, Role.Sales, hours, salary, bonus);
         }
-
+        public List<Sales> DeleteSalesPersonFromList(List<Sales> salesPeople, Sales salesPersonToDel)
+        {
+            for (int i = 0; i < salesPeople.Count; i++)
+            {
+                if (salesPeople[i].Id == salesPersonToDel.Id)
+                    salesPeople.RemoveAt(i);
+            }
+            return salesPeople;
+        }
         public Customer FindCustomer(Sales sales, Manager manager)
         {
             Customer newCustomer = new Customer(helper.GenerateId(), helper.RandomBusinessName(), helper.RandomBool());
@@ -44,6 +59,32 @@ namespace Services
         public Worker CreateWorker(string firstName, string lastName, double salary, Manager manager)
         {
             return new Worker(helper.GenerateId(), firstName, lastName, Role.Worker, 160, salary, manager);
+        }
+        public Worker DeleteWorkerFromList(List<Worker> workers, Worker workerToDel)
+        {
+            for (int i = 0; i < workers.Count; i++)
+            {
+                if (workers[i].Id == workerToDel.Id)
+                {
+                    workers.RemoveAt(i);
+                    return workerToDel;
+                }
+                    
+            }
+            return null;
+        }
+        public List<Worker> DeleteWorkersWithSalaryGreaterThan(List<Worker> workers, double salary)
+        {
+            for (int i = 0; i < workers.Count; i++)
+            {
+                if (workers[i].Salary > salary)
+                {
+                    workers.RemoveAt(i);
+                    i--;
+                }
+                    
+            }
+            return workers;
         }
         #endregion
 
