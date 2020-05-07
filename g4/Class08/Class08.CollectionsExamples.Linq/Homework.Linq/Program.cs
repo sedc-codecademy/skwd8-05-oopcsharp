@@ -11,7 +11,7 @@ namespace Homework.Linq
 			FirstName = firstName;
 			LastName = lastName;
 			Age = age;
-			Gender = Gender;
+			Gender = gender;
 		}
 
 		public string FirstName { get; set; }
