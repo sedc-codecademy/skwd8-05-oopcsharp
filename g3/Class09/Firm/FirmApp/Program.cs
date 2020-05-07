@@ -77,7 +77,8 @@ namespace FirmApp
 
             Console.WriteLine($"Due to the COVID-19 situation unfortunately we will have to let go Manager: {alek.FirstName} {alek.LastName}");
             Console.WriteLine($"Now the managers list is as following:");
-            foreach (var manager in employeeService.DeleteManagerFromList(managers, alek))
+            List<Manager> managersToDel = employeeService.DeleteManagerFromList(managers, alek);
+            foreach (var manager in managersToDel)
                 Console.WriteLine($"{manager.FirstName} {manager.LastName}");
 
             Console.WriteLine($"Due to the COVID-19 situation unfortunately we will have to let go SalesPerson: {ariah.FirstName} {ariah.LastName}");
@@ -85,9 +86,13 @@ namespace FirmApp
             foreach (var salesPerson in employeeService.DeleteSalesPersonFromList(salesPeople, ariah))
                 Console.WriteLine($"{salesPerson.FirstName} {salesPerson.LastName}");
 
-            Console.Write($"Due to the COVID-19 situation unfortunately we will have to let go Worker:  ");
+            
             Worker workerLetGo = employeeService.DeleteWorkerFromList(workers, leah);
-            Console.WriteLine($"{workerLetGo.FirstName} {workerLetGo.LastName}");
+            if (workerLetGo != null)
+            {
+                Console.Write($"Due to the COVID-19 situation unfortunately we will have to let go Worker:  ");
+                Console.WriteLine($"{workerLetGo.FirstName} {workerLetGo.LastName}");
+            }
 
             Console.WriteLine($"Now the Workers list is as following:");
             foreach (var worker in workers)
