@@ -32,7 +32,7 @@ namespace TeamSource.Helpers
                                 { "RebPerGame", 9.5f }
                             }
                         },
-                         new Player()
+                        new Player()
                          {
                             FullName = "Dwight Howard",
                             Age = 34,
@@ -42,7 +42,7 @@ namespace TeamSource.Helpers
                                 { "RebPerGame", 7.5f }
                             }
                          },
-                          new Player()
+                        new Player()
                           {
                             FullName = "Antony Davies",
                             Age = 27,
