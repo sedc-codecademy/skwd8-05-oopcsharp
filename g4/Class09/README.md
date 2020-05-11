@@ -1,4 +1,4 @@
-# Class 09 - Error handling and Exceptions 😮
+# Class 09 - Error handling and Exceptions ❌❗
 
 ## Error handling
 There are **two** main types of errors when working with C# and those are: 
