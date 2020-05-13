@@ -1,4 +1,5 @@
 ﻿using SEDC.VideoRental.Data.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SEDC.VideoRental.Data.Database
@@ -16,6 +17,11 @@ namespace SEDC.VideoRental.Data.Database
             Users.Add(user);
 
             return beforeCount != Users.Count;
+        }
+
+        public List<int> GetAllCardNumbers()
+        {
+            return Users.Select(_user => _user.CardNumber).ToList();
         }
     }
 }
