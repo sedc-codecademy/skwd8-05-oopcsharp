@@ -1,7 +1,8 @@
-# Movie Rental App Requriements
+# Video Rental App Requriements
 
-Movie rental app where we can rent movies online.
+Video rental app where we can rent movie videos online.
 
+## Part 1
 1. The solution will have 2 class libraries and 1 application console project:
 	- Application (console app)
 	- Business domain (class library)
@@ -53,3 +54,19 @@ Movie rental app where we can rent movies online.
 	- Get by year
 	- Sort/Get by availability
 	- Search by title
+
+## Part 2
+
+Add funtionalities for the user to:
+1. View all movies
+	*  Order movies
+	*  Get movies by genre
+	*  Get movies by release year
+	*  Search movies by title
+	*  Rent a video
+2. View history
+	*  History of rented videos
+	*  Suggestions - optional
+3. View rented videos
+	*  Videos in users hands
+    *  Return videos
