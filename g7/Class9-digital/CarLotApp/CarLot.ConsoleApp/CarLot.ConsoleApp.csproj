@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarLotApp.Domains\CarLotApp.Domains.csproj" />
+    <ProjectReference Include="..\CarLotApp.Services\CarLotApp.Services.csproj" />
+  </ItemGroup>
+
+</Project>
