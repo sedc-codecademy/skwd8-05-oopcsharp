@@ -45,6 +45,11 @@ namespace Collections.Recap
             List<Vehicle> firstThree = vehByBrand.Take(3).ToList();
             List<Vehicle> secondThree = vehByBrand.Skip(3).Take(3).ToList();
             List<Vehicle> thirdThree = vehByBrand.Skip(6).Take(3).ToList();
+            int l;
+            for (int i = 0; i < 5; i++)
+            {
+                l=i;
+            }
 
             PrintList(firstThree);
             PrintList(secondThree);
