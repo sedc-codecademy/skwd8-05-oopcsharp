@@ -18,7 +18,7 @@ namespace WebApi.Fake_Database
             User bob = new User()
             {
                 Id = 2,
-                FirstName = "John",
+                FirstName = "Bob",
                 LastName = "Bobsky"
             };
             User mark = new User()
