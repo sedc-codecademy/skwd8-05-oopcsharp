@@ -1,6 +1,6 @@
-﻿using SEDC.VideoRental.App.Menus;
-using SEDC.VideoRental.Data.Models;
+﻿using SEDC.VideoRental.Data.Models;
 using SEDC.VideoRental.Services.Helpers;
+using SEDC.VideoRental.Services.Menus;
 using SEDC.VideoRental.Services.Services;
 using System;
 
@@ -10,9 +10,13 @@ namespace SEDC.VideoRental.App
     {
         static void Main(string[] args)
         {
-            var _userService = new UserService();
-            User user;
+            Console.Title = "Video Rental";
 
+            var _userService = new UserService();
+            var _movieService = new MovieService();
+            User user = null;
+
+            #region Login
             Screen.HomeScreen();
             bool isLoggedIn = false;
             while (!isLoggedIn)
@@ -40,9 +44,26 @@ namespace SEDC.VideoRental.App
                         break;
                 }
             }
+            #endregion
 
-            Console.WriteLine("Cool");
-            Console.ReadLine();
+
+            while (true)
+            {
+                Screen.MainMenu(user.FullName);
+                var selection = InputParser.ToInteger(1, 4);
+                switch (selection)
+                {
+                    case 1:
+                        _movieService.ViewMovieList(user);
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                }
+            }
         }
     }
 }

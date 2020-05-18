@@ -1,4 +1,6 @@
-﻿using SEDC.VideoRental.Data.Models;
+﻿using SEDC.VideoRental.Data.Enums;
+using SEDC.VideoRental.Data.Models;
+using System;
 using System.Collections.Generic;
 
 namespace SEDC.VideoRental.Data.Database
