@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq.SpecialEdition", "Linq.SpecialEdition\Linq.SpecialEdition.csproj", "{C621892A-652B-43D9-ADE2-AF1071FBEC34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eshop", "Eshop\Eshop.csproj", "{80BC1840-900E-44F8-813A-C15631BEB550}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C621892A-652B-43D9-ADE2-AF1071FBEC34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C621892A-652B-43D9-ADE2-AF1071FBEC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C621892A-652B-43D9-ADE2-AF1071FBEC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C621892A-652B-43D9-ADE2-AF1071FBEC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BC1840-900E-44F8-813A-C15631BEB550}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BC1840-900E-44F8-813A-C15631BEB550}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BC1840-900E-44F8-813A-C15631BEB550}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BC1840-900E-44F8-813A-C15631BEB550}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6B3F363B-5817-4320-ACCC-9871E916D194}
+	EndGlobalSection
+EndGlobal
