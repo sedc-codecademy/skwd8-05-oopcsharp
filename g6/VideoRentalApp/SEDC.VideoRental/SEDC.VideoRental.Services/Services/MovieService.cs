@@ -1,11 +1,13 @@
 ﻿using SEDC.VideoRental.Data.Database;
 using SEDC.VideoRental.Data.Models;
 using SEDC.VideoRental.Services.Helpers;
+using SEDC.VideoRental.Services.Loaders;
 using SEDC.VideoRental.Services.Menus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace SEDC.VideoRental.Services.Services
 {
@@ -20,14 +22,21 @@ namespace SEDC.VideoRental.Services.Services
 
         public void ViewMovieList(User user)
         {
-            var movies = new List<Movie>();
+            string errorMessage = string.Empty;
+            var movies = _movieRepository.GetAllMovies();
 
             bool isFinished = false;
             while (!isFinished)
             {
+                Screen.ClearScreen();
+                Screen.ErrorMessage(errorMessage);
                 if (movies.Count != 0)
                 {
                     PrintMoviesInfo(movies);
+                }
+                else
+                {
+                    Console.WriteLine("No videos available with that filtering options");
                 }
                 Screen.OrderingMenu();
                 var selection = InputParser.ToInteger(0, 9);
@@ -66,12 +75,58 @@ namespace SEDC.VideoRental.Services.Services
                         movies = _movieRepository.SearchMoviesByTitle(titlePart);
                         break;
                     case 9:
-                        // Rent a video
+                        try
+                        {
+                            RentVideo(user);
+                        }
+                        catch (Exception ex)
+                        {
+                            errorMessage = ex.Message;
+                        }
                         break;
                     case 0:
                         isFinished = !isFinished;
                         break;
                 }
+            }
+        }
+
+        private void RentVideo(User user)
+        {
+            Console.Write("Enter movie id: ");
+            var movieId = InputParser.ToInteger(
+                _movieRepository.GetAllMovies().Min(_movie => _movie.Id),
+                _movieRepository.GetAllMovies().Max(_movie => _movie.Id)
+                );
+
+            var movie = _movieRepository.GetMovieById(movieId);
+            if (movie != null)
+            {
+                if (!movie.IsAvailable)
+                {
+                    throw new Exception($"Movie {movie.Title} is not available at the moment");
+                }
+                Console.WriteLine($"Are you sure you want to rent {movie.Title}? y/n");
+                bool confirm = InputParser.ToConfirm();
+                if (!confirm)
+                {
+                    return;
+                }
+
+                Console.WriteLine("Renting movie please wait...");
+                LoadingHelpers.Spiner();
+                movie.Quantity -= 1;
+                if(movie.Quantity == 0)
+                {
+                    movie.IsAvailable = !movie.IsAvailable;
+                }
+                user.RentedMovies.Add(movie);
+                Console.WriteLine("Successfuly rented movie");
+                Thread.Sleep(2000);
+            }
+            else
+            {
+                throw new Exception($"No movie was found with {movieId} id");
             }
         }
 

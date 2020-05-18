@@ -49,6 +49,7 @@ namespace SEDC.VideoRental.App
 
             while (true)
             {
+                Screen.ClearScreen();
                 Screen.MainMenu(user.FullName);
                 var selection = InputParser.ToInteger(1, 4);
                 switch (selection)

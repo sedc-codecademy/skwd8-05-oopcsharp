@@ -57,5 +57,10 @@ namespace SEDC.VideoRental.Data.Database
             // same as top but using StringComparison instead of ToLower();
             //return Movies.Where(_movie => _movie.Title.ToLower().Contains(titlePart.ToLower())).ToList();
         }
+
+        public Movie GetMovieById(int id)
+        {
+            return Movies.FirstOrDefault(_movie => _movie.Id == id);
+        }
     }
 }

@@ -52,5 +52,19 @@ namespace SEDC.VideoRental.Services.Menus
             Console.WriteLine("9. Rent a video");
             Console.WriteLine("0. Go back");
         }
+
+        public static void ClearScreen()
+        {
+            Console.Clear();
+            HomeScreen();
+        }
+
+        public static void ErrorMessage(string errorMessage)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.WriteLine(errorMessage);
+            Console.ResetColor();
+        }
     }
 }
