@@ -4,6 +4,7 @@ using SEDC.VideoRental.Services.Helpers;
 using SEDC.VideoRental.Services.Menus;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace SEDC.VideoRental.Services.Services
@@ -19,40 +20,50 @@ namespace SEDC.VideoRental.Services.Services
 
         public void ViewMovieList(User user)
         {
+            var movies = new List<Movie>();
+
             bool isFinished = false;
             while (!isFinished)
             {
+                if (movies.Count != 0)
+                {
+                    PrintMoviesInfo(movies);
+                }
                 Screen.OrderingMenu();
                 var selection = InputParser.ToInteger(0, 9);
                 switch (selection)
                 {
                     case 1:
-                        var movies = _movieRepository.GetAllMovies();
-                        PrintMoviesInfo(movies);
+                        movies = _movieRepository.GetAllMovies();
                         break;
                     case 2:
-                        var orderedMoviesByGenre = _movieRepository.OrderByGenre();
-                        PrintMoviesInfo(orderedMoviesByGenre);
+                        movies = _movieRepository.OrderByGenre();
                         break;
                     case 3:
-                        // Get videos by genre;
+                        var genre = InputParser.ToGenre();
+                        movies = _movieRepository.GetByGenre(genre);
                         break;
                     case 4:
-                        var orderedMoviesByReleaseDate = _movieRepository.OrderByReleaseDate();
-                        PrintMoviesInfo(orderedMoviesByReleaseDate);
+                        movies = _movieRepository.OrderByReleaseDate();
                         break;
                     case 5:
-                        // Get movies by year of release
+                        Console.Write("Enter year: ");
+                        var year = InputParser.ToInteger(
+                            _movieRepository.GetAllMovies().Min(_movie => _movie.ReleaseDate.Year),
+                            DateTime.Now.Year - 1
+                            );
+                        movies = _movieRepository.GetByYear(year);
                         break;
                     case 6:
-                        var orderedMoviesByAvailability = _movieRepository.OrderByAvailability();
-                        PrintMoviesInfo(orderedMoviesByAvailability);
+                        movies = _movieRepository.OrderByAvailability();
                         break;
                     case 7:
-                        // Get available videos
+                        movies = _movieRepository.GetAvailableMovies();
                         break;
                     case 8:
-                        // Search videos by title
+                        Console.Write("Enter search phrase: ");
+                        string titlePart = Console.ReadLine();
+                        movies = _movieRepository.SearchMoviesByTitle(titlePart);
                         break;
                     case 9:
                         // Rent a video
