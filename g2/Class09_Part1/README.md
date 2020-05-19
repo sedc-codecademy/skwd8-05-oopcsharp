@@ -1,4 +1,4 @@
-# Class 10 - Error handling and Exceptions 😮
+# Class 09 - Error handling and Exceptions 
 
 ## Error handling
 There are two main types of errors when working with C# and those are: 
@@ -62,3 +62,5 @@ finally
 ## Extra Materials 📘
 * [Official Microsoft documentation for try/catch](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)
 * [Handling exceptions best practices](https://stackify.com/csharp-exception-handling-best-practices/)
+* [Exception Handling definitions and types of exceptions](https://www.tutorialspoint.com/csharp/csharp_exception_handling.htm)
+* [Exception Handling Examples](https://www.c-sharpcorner.com/article/exception-handling-in-C-Sharp/)
