@@ -11,6 +11,20 @@ namespace CinemaApp.Services
         {
             movies.ForEach(movie => Console.WriteLine(movie.Title));
         }
+        public static int TryParse(string input)
+        {
+            int num;
+            try
+            {
+                num = int.Parse(input);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                num = 0;
+            }
+            return num;
+        }
 
         public static int SelectCinemaByName(string userInput)
         {
