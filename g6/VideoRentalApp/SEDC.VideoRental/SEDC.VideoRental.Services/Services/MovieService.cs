@@ -120,7 +120,7 @@ namespace SEDC.VideoRental.Services.Services
                 {
                     movie.IsAvailable = !movie.IsAvailable;
                 }
-                user.RentedMovies.Add(movie);
+                user.RentedMovies.Add(new RentalInfo(movie));
                 Console.WriteLine("Successfuly rented movie");
                 Thread.Sleep(2000);
             }
@@ -141,6 +141,87 @@ namespace SEDC.VideoRental.Services.Services
                     movie.Genre, availablity, movie.Quantity)
                     );
             }
+        }
+
+        public void ViewRentedVideos(User user)
+        {
+            string errorMessage = string.Empty;
+            var rentals = user.RentedMovies;
+            bool isFinished = false;
+            while (!isFinished)
+            {
+                try
+                {
+                    Screen.ClearScreen();
+                    Screen.ErrorMessage(errorMessage);
+                    if(rentals.Count != 0)
+                    {
+                        var movies = rentals.Select(_rental => _rental.Movie).ToList();
+                        PrintMoviesInfo(movies);
+                    }
+                    else
+                    {
+                        throw new Exception("You have not rented any videos");
+                    }
+                    Screen.RentedMenu();
+                    int selection = InputParser.ToInteger(0, 2);
+                    switch (selection)
+                    {
+                        case 1:
+                            rentals = user.RentedMovies;
+                            break;
+                        case 2:
+                            ReturnMovie(user);
+                            break;
+                        case 0:
+                            isFinished = !isFinished;
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    errorMessage = ex.Message;
+                }
+            }
+        }
+
+        private void ReturnMovie(User user)
+        {
+            if(user.RentedMovies.Count == 0)
+            {
+                throw new Exception("You do not have any rented videos.");
+            }
+
+            Console.WriteLine("Enter movie id in order to return a video");
+            var movieId = InputParser.ToInteger(1, int.MaxValue);
+
+            var rental = user.RentedMovies.FirstOrDefault(_rental => _rental.Movie.Id == movieId);
+            LoadingHelpers.ShowSimplePercentage();
+            if(rental != null)
+            {
+                rental.DateReturned = DateTime.Now;
+                var movie = _movieRepository.GetMovieById(movieId);
+                if(movie.Quantity == 0)
+                {
+                    movie.IsAvailable = !movie.IsAvailable;
+                }
+                movie.Quantity += 1;
+
+                user.RentedMovies.Remove(rental);
+                user.RentedMoviesHistory.Add(rental);
+
+                Console.WriteLine("Successfuly returned.");
+                Thread.Sleep(2000);
+                return;
+            }
+
+            throw new Exception("You do not have that movie rented. Please enter valid movie id");
+        }
+
+        // to be implemented in later stage
+        private void PrintRentedInfo(List<RentalInfo> rentals)
+        {
+
         }
     }
 }

@@ -58,6 +58,7 @@ namespace SEDC.VideoRental.App
                         _movieService.ViewMovieList(user);
                         break;
                     case 2:
+                        _movieService.ViewRentedVideos(user);
                         break;
                     case 3:
                         break;
