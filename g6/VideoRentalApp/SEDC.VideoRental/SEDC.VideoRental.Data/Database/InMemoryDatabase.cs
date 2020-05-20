@@ -19,7 +19,8 @@ namespace SEDC.VideoRental.Data.Database
         {
             Users = new List<User>
             {
-                new User() { CardNumber = 123, FullName = "Trajan Stevkovski" }
+                new User() { CardNumber = 123, FullName = "Trajan Stevkovski" },
+                new User() { CardNumber = 112, FullName = "Im Admin", IsAdmin = true }
             };
 
             Movies = new List<Movie>

@@ -12,6 +12,8 @@ namespace SEDC.VideoRental.Data.Models
         public bool IsSubscriptionExpired { get; set; }
         //public DateTime SubscriptionRenewed { get; set; }???????
 
+        public bool IsAdmin { get; set; }
+
         public List<RentalInfo> RentedMovies { get; set; }
         public List<RentalInfo> RentedMoviesHistory { get; set; }
 

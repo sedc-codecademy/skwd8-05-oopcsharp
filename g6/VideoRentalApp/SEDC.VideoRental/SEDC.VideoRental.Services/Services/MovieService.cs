@@ -102,6 +102,18 @@ namespace SEDC.VideoRental.Services.Services
             var movie = _movieRepository.GetMovieById(movieId);
             if (movie != null)
             {
+                // One way of viewing if the user has rented video 
+                //if(user.RentedMovies.Any(_rental => _rental.Movie.Id == movieId))
+                //{
+                //    throw new Exception($"Already rented {movie.Title} please return it first");
+                //}
+
+                var listOfRentedMovieIds = user.RentedMovies.Select(rental => rental.Movie.Id).ToList();
+                if (listOfRentedMovieIds.Contains(movieId))
+                {
+                    throw new Exception($"Already rented {movie.Title} please return it first");
+                }
+
                 if (!movie.IsAvailable)
                 {
                     throw new Exception($"Movie {movie.Title} is not available at the moment");

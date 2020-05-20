@@ -48,36 +48,46 @@ namespace SEDC.VideoRental.App
             #endregion
 
 
-            while (true)
+            if (!user.IsAdmin)
             {
-                Screen.ClearScreen();
-                Screen.ErrorMessage(errorMessage);
-                errorMessage = string.Empty;
-                Screen.MainMenu(user.FullName);
-                var selection = InputParser.ToInteger(1, 4);
-                switch (selection)
+                while (true)
                 {
-                    case 1:
-                        _movieService.ViewMovieList(user);
-                        break;
-                    case 2:
-                        _movieService.ViewRentedVideos(user);
-                        break;
-                    case 3:
-                        try
-                        {
-                            _movieService.ViewRentedHistoryVideos(user);
-                        }
-                        catch (Exception ex)
-                        {
-                            errorMessage = ex.Message;
-                        }
-                        break;
-                    case 4:
-                        Environment.Exit(0);
-                        break;
+                    Screen.ClearScreen();
+                    Screen.ErrorMessage(errorMessage);
+                    errorMessage = string.Empty;
+                    Screen.MainMenu(user.FullName);
+                    var selection = InputParser.ToInteger(1, 4);
+                    switch (selection)
+                    {
+                        case 1:
+                            _movieService.ViewMovieList(user);
+                            break;
+                        case 2:
+                            _movieService.ViewRentedVideos(user);
+                            break;
+                        case 3:
+                            try
+                            {
+                                _movieService.ViewRentedHistoryVideos(user);
+                            }
+                            catch (Exception ex)
+                            {
+                                errorMessage = ex.Message;
+                            }
+                            break;
+                        case 4:
+                            Environment.Exit(0);
+                            break;
+                    }
                 }
             }
+            else
+            {
+                Console.WriteLine("Cool you are an admin");
+                Console.WriteLine("So create your own admin panel :)");
+                Console.ReadLine();
+            }
+
         }
     }
 }

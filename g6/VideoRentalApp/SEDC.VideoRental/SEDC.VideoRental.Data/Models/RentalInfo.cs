@@ -15,6 +15,7 @@ namespace SEDC.VideoRental.Data.Models
         {
             Movie = movie;
             DateRented = DateTime.Now;
+            // this is done because DateTime is no nullable type
             DateReturned = DateTime.Now.AddMonths(-1);
         }
     }
