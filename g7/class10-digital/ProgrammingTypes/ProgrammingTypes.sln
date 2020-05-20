@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImperativeDeclarativeComparison", "ImperativeDeclarativeComparison\ImperativeDeclarativeComparison.csproj", "{60551FF6-0116-48FB-BC1F-8BC9CF3F2BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticAndMoreErrorTypes", "StaticAndMoreErrorTypes\StaticAndMoreErrorTypes.csproj", "{C544391C-CBFD-41F1-96E5-538E53B7CC19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60551FF6-0116-48FB-BC1F-8BC9CF3F2BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60551FF6-0116-48FB-BC1F-8BC9CF3F2BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60551FF6-0116-48FB-BC1F-8BC9CF3F2BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60551FF6-0116-48FB-BC1F-8BC9CF3F2BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C544391C-CBFD-41F1-96E5-538E53B7CC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C544391C-CBFD-41F1-96E5-538E53B7CC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C544391C-CBFD-41F1-96E5-538E53B7CC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C544391C-CBFD-41F1-96E5-538E53B7CC19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E98C3F0E-105F-40FE-B0A0-D55CBD0ED9AF}
+	EndGlobalSection
+EndGlobal
