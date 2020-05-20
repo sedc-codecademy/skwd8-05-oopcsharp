@@ -70,7 +70,7 @@ namespace SEDC.VideoRental.Services.Menus
             //    Console.WriteLine(errorMessage);
             //}
             // same as commneted code
-            if (string.IsNullOrWhiteSpace(errorMessage))
+            if (!string.IsNullOrWhiteSpace(errorMessage))
             {
                 Console.WriteLine(errorMessage);
             }

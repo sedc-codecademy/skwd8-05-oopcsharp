@@ -15,6 +15,7 @@ namespace SEDC.VideoRental.App
             var _userService = new UserService();
             var _movieService = new MovieService();
             User user = null;
+            string errorMessage = string.Empty;
 
             #region Login
             Screen.HomeScreen();
@@ -50,6 +51,8 @@ namespace SEDC.VideoRental.App
             while (true)
             {
                 Screen.ClearScreen();
+                Screen.ErrorMessage(errorMessage);
+                errorMessage = string.Empty;
                 Screen.MainMenu(user.FullName);
                 var selection = InputParser.ToInteger(1, 4);
                 switch (selection)
@@ -61,8 +64,17 @@ namespace SEDC.VideoRental.App
                         _movieService.ViewRentedVideos(user);
                         break;
                     case 3:
+                        try
+                        {
+                            _movieService.ViewRentedHistoryVideos(user);
+                        }
+                        catch (Exception ex)
+                        {
+                            errorMessage = ex.Message;
+                        }
                         break;
                     case 4:
+                        Environment.Exit(0);
                         break;
                 }
             }

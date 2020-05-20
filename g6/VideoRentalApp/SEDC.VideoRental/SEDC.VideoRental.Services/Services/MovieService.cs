@@ -161,7 +161,7 @@ namespace SEDC.VideoRental.Services.Services
                     }
                     else
                     {
-                        throw new Exception("You have not rented any videos");
+                        Console.WriteLine("You have not rented any videos");
                     }
                     Screen.RentedMenu();
                     int selection = InputParser.ToInteger(0, 2);
@@ -218,10 +218,29 @@ namespace SEDC.VideoRental.Services.Services
             throw new Exception("You do not have that movie rented. Please enter valid movie id");
         }
 
-        // to be implemented in later stage
+        public void ViewRentedHistoryVideos(User user)
+        {
+            if (user.RentedMoviesHistory.Count == 0)
+            {
+                throw new Exception("You do not have any videos rented history");
+            }
+
+            PrintRentedInfo(user.RentedMoviesHistory);
+
+            Console.WriteLine("To go back prees 0");
+            int selection = InputParser.ToInteger(0, 0);
+            if(selection == 0)
+            {
+                return;
+            }
+        }
+
         private void PrintRentedInfo(List<RentalInfo> rentals)
         {
-
+            foreach (var rental in rentals)
+            {
+                Console.WriteLine($"{rental.Movie.Title} rented from {rental.DateRented} to {rental.DateReturned}");
+            }
         }
     }
 }
