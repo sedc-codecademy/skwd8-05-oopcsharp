@@ -65,5 +65,27 @@ namespace CinemaApp.Services
 
             //throw new NotImplementedException();
         }
+
+        public static List<Movie> GetMoviesLargerThen(short rating, List<Cinema> cinemas)
+        {
+            List<Movie> resultMovies = new List<Movie>();
+
+            cinemas.ForEach(c => resultMovies.AddRange(
+                //c.Movies.Where(m => m.Rating > rating).ToList()
+                FilterMoviesBy(rating, c)
+            ));
+
+            return resultMovies;
+        }
+
+        public static List<Movie> GetMoviesLargerThen(short rating, Cinema cinema)
+        {
+            return FilterMoviesBy(rating, cinema);
+        }
+
+        private static List<Movie> FilterMoviesBy(short rating, Cinema cinema)
+        {
+            return cinema.Movies.Where(m => m.Rating > rating).ToList();
+        }
     }
 }
