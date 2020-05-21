@@ -63,8 +63,26 @@ namespace SEDC.VideoRental.Services.Menus
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.BackgroundColor = ConsoleColor.White;
-            Console.WriteLine(errorMessage);
+            //if (errorMessage != string.Empty
+            //    && errorMessage.Trim() != string.Empty 
+            //    && errorMessage != null)
+            //{
+            //    Console.WriteLine(errorMessage);
+            //}
+            // same as commneted code
+            if (!string.IsNullOrWhiteSpace(errorMessage))
+            {
+                Console.WriteLine(errorMessage);
+            }
             Console.ResetColor();
+        }
+
+        public static void RentedMenu()
+        {
+            Console.WriteLine("Use the numbers in front of the selection to navigate thru the applicaton.");
+            Console.WriteLine("1. View all videos");
+            Console.WriteLine("2. Return video");
+            Console.WriteLine("0. Go back");
         }
     }
 }

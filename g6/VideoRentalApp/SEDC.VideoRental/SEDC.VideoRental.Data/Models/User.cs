@@ -12,14 +12,16 @@ namespace SEDC.VideoRental.Data.Models
         public bool IsSubscriptionExpired { get; set; }
         //public DateTime SubscriptionRenewed { get; set; }???????
 
-        public List<Movie> RentedMovies { get; set; }
-        public List<Movie> RentedMoviesHistory { get; set; }
+        public bool IsAdmin { get; set; }
+
+        public List<RentalInfo> RentedMovies { get; set; }
+        public List<RentalInfo> RentedMoviesHistory { get; set; }
 
         public User()
         {
             IsSubscriptionExpired = false;
-            RentedMovies = new List<Movie>();
-            RentedMoviesHistory = new List<Movie>();
+            RentedMovies = new List<RentalInfo>();
+            RentedMoviesHistory = new List<RentalInfo>();
         }
     }
 }

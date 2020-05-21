@@ -60,5 +60,29 @@ namespace CinemaApp.Services
             //        return movies.Where(m => m.Genre == Genre.Other).ToList();
             //}
         }
+
+        public static List<Movie> GetMoviesLargerThanRating(short rating, List<Movie> movies)
+        {
+            return movies.Where(movie => movie.Rating > rating).ToList();
+        }
+
+        public static List<Movie> GetExpesiveMovies(double minPrice, List<Movie> movies)
+        {
+            return movies.Where(movie => movie.TicketPrice > minPrice).ToList();
+        }
+
+        public static List<Movie> GetCheapMovies(double maxPrice, List<Movie> movies)
+        {
+            return movies.Where(movie => movie.TicketPrice < maxPrice).ToList();
+        }
+
+        public static List<Cinema> GetCinemasByMovie(Movie movie, List<Cinema> cinemas)
+        {
+            return cinemas.Where(cinema => cinema.Movies.Contains(movie)).ToList();
+
+            return cinemas.Where(cinema => {
+                return cinema.Movies.Contains(movie);
+            }).ToList();
+        }
     }
 }

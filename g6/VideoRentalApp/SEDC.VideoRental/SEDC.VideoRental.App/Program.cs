@@ -15,6 +15,7 @@ namespace SEDC.VideoRental.App
             var _userService = new UserService();
             var _movieService = new MovieService();
             User user = null;
+            string errorMessage = string.Empty;
 
             #region Login
             Screen.HomeScreen();
@@ -47,24 +48,46 @@ namespace SEDC.VideoRental.App
             #endregion
 
 
-            while (true)
+            if (!user.IsAdmin)
             {
-                Screen.ClearScreen();
-                Screen.MainMenu(user.FullName);
-                var selection = InputParser.ToInteger(1, 4);
-                switch (selection)
+                while (true)
                 {
-                    case 1:
-                        _movieService.ViewMovieList(user);
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    case 4:
-                        break;
+                    Screen.ClearScreen();
+                    Screen.ErrorMessage(errorMessage);
+                    errorMessage = string.Empty;
+                    Screen.MainMenu(user.FullName);
+                    var selection = InputParser.ToInteger(1, 4);
+                    switch (selection)
+                    {
+                        case 1:
+                            _movieService.ViewMovieList(user);
+                            break;
+                        case 2:
+                            _movieService.ViewRentedVideos(user);
+                            break;
+                        case 3:
+                            try
+                            {
+                                _movieService.ViewRentedHistoryVideos(user);
+                            }
+                            catch (Exception ex)
+                            {
+                                errorMessage = ex.Message;
+                            }
+                            break;
+                        case 4:
+                            Environment.Exit(0);
+                            break;
+                    }
                 }
             }
+            else
+            {
+                Console.WriteLine("Cool you are an admin");
+                Console.WriteLine("So create your own admin panel :)");
+                Console.ReadLine();
+            }
+
         }
     }
 }
