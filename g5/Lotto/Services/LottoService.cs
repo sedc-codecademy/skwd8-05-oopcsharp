@@ -14,17 +14,48 @@ namespace Services
             DataHelper.LottoOrganization = newOrganization;
         }
 
-        public void Draw()
+        public Round Draw()
         {
-            List<int> winingNumbers = GenerateRandomNumbers();
-
             int activeRoundNumber = DataHelper.LottoOrganization.Rounds.Select(x => x.RoundNumber).Max();
             Round activeRound = DataHelper.LottoOrganization.Rounds.Single(x => x.RoundNumber == activeRoundNumber);
+            
+            List<int> winingNumbers = GenerateRandomNumbers();
 
             activeRound.WiningNumbers = winingNumbers;
 
-            //Check for wining tickets
-            foreach (var ticket in activeRound.Tickets)
+            CheckForWinningTickets(activeRound);
+
+            CalculatePrice(activeRound);
+
+            GenerateNewRound(activeRoundNumber);
+
+            return activeRound;
+        }
+
+        private List<int> GenerateRandomNumbers()
+        {
+            List<int> numbers = new List<int>();
+            Random rnd = new Random();
+
+            for (int i = 0; i < 7; i++)
+            {
+                int rndNumber = rnd.Next(1, 38);
+
+                if (numbers.Any(x => x == rndNumber))
+                {
+                    i--;
+                    continue;
+                }
+
+                numbers.Add(rndNumber);
+            }
+
+            return numbers;
+        }
+
+        private void CheckForWinningTickets(Round round)
+        {
+            foreach (var ticket in round.Tickets)
             {
                 #region Step by step check
                 //int correctNumber = 0;
@@ -61,7 +92,7 @@ namespace Services
                 //}
                 #endregion
 
-                List<int> correctlyGuessNumbers = winingNumbers.Intersect(ticket.Numbers).ToList();
+                List<int> correctlyGuessNumbers = round.WiningNumbers.Intersect(ticket.Numbers).ToList();
 
                 if (correctlyGuessNumbers.Count < 4)
                 {
@@ -69,32 +100,32 @@ namespace Services
                 }
                 else
                 {
-                    ticket.Status = (TicketStatus) correctlyGuessNumbers.Count;
-                    //TODO: Calculate price
+                    ticket.Status = (TicketStatus)correctlyGuessNumbers.Count;
                 }
             }
         }
 
-        private List<int> GenerateRandomNumbers()
+        private void CalculatePrice(Round round)
         {
-            List<int> numbers = new List<int>();
-            Random rnd = new Random();
-
-            for (int i = 0; i < 7; i++)
+            foreach (var ticket in round.Tickets.Where(x =>
+                x.Status != TicketStatus.InProgress && x.Status != TicketStatus.Lost))
             {
-                //TODO: Check if rnd.Next gets upper bound
-                int rndNumber = rnd.Next(1, 37);
+                ticket.Price = ticket.Payment * DataHelper.PriceTable[ticket.Status];
 
-                if (numbers.Any(x => x == rndNumber))
+                User user = DataHelper.Users.FirstOrDefault(x => x.Id == ticket.UserId);
+
+                if (user == null)
                 {
-                    i--;
-                    continue;
+                    throw new Exception("User not found.");
                 }
 
-                numbers.Add(rndNumber);
+                user.Balance += ticket.Price;
             }
+        }
 
-            return numbers;
+        private void GenerateNewRound(int previousRoundNumber)
+        {
+            DataHelper.LottoOrganization.Rounds.Add(new Round(previousRoundNumber + 1));
         }
     }
 }
