@@ -21,5 +21,17 @@ namespace Services
 
             DataHelper.Users.Add(new User(name, cardNumber));
         }
+
+        public User Login(string card)
+        {
+            User user = DataHelper.Users.FirstOrDefault(x => x.CardNumber == card);
+
+            if (user == null)
+            {
+                throw new Exception("The card does not exist.");
+            }
+
+            return user;
+        }
     }
 }
