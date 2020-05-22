@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQ.Homework", "LINQ.Homework\LINQ.Homework.csproj", "{A37DD668-F307-42F6-A60B-15BAF2D54AF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQ.Homework", "LINQ.Homework\LINQ.Homework.csproj", "{A37DD668-F307-42F6-A60B-15BAF2D54AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWindowsApp", "MyFirstWindowsApp\MyFirstWindowsApp.csproj", "{91442DBE-F5E2-42B1-9B3E-2370E2F491A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstWebApp", "MyFirstWebApp\MyFirstWebApp.csproj", "{EF4FB4F4-46A6-4B12-A4A0-FFB5642C0FF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{A37DD668-F307-42F6-A60B-15BAF2D54AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A37DD668-F307-42F6-A60B-15BAF2D54AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A37DD668-F307-42F6-A60B-15BAF2D54AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91442DBE-F5E2-42B1-9B3E-2370E2F491A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91442DBE-F5E2-42B1-9B3E-2370E2F491A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91442DBE-F5E2-42B1-9B3E-2370E2F491A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91442DBE-F5E2-42B1-9B3E-2370E2F491A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4FB4F4-46A6-4B12-A4A0-FFB5642C0FF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4FB4F4-46A6-4B12-A4A0-FFB5642C0FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4FB4F4-46A6-4B12-A4A0-FFB5642C0FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4FB4F4-46A6-4B12-A4A0-FFB5642C0FF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
