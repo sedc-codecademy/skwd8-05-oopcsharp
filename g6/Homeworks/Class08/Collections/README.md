@@ -4,7 +4,7 @@
 1. Search products by category // return all products from given category
 2. Filter products by price range (from min to max) // return all products that fall in the given price range 
 3. Find products by part of name // get all products that consist the part in their names
-4. Get only products ids // return only the ids of the products
+4. Get only products names // return only the names of the products
 5. Get product price // get the price of the product - give the id as parameter
 6. Get cheapest product // return the cheapest product
 7. Get most expensive product // return the most expensive one
